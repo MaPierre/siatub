@@ -27,7 +27,7 @@
         margin:.5em;
     }
 </style>
-<div class="col-sm-4 col-md-6 col-lg-12 py-5">
+<div class="col-lg-12 py-5">
     <div class="contain-fluid">
         <div class="card card-outline card-navy shadow rounded-0">
             <div class="card-body rounded-0">
