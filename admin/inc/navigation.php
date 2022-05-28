@@ -1,6 +1,6 @@
 </style>
 <!-- Main Sidebar Container -->
-      <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-no-expand bg-dark">
+      <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-no-expand bg-dark bg-gradient">
         <!-- Brand Logo -->
         <a href="<?php echo base_url ?>admin" class="brand-link bg-transparent text-sm shadow-sm">
         <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Logo Système" class="brand-image img-circle elevation-3 bg-black" style="width: 3rem;height: 3rem;max-height: unset;object-fit:scale-down;object-position:center center">
@@ -48,7 +48,7 @@
                       </a>
                     </li>
                     <?php if($_settings->userdata('type') == 1): ?>
-                    <li class="nav-header">Maintenance</li>
+                    <li class="nav-header">Maintenance du site</li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=departments" class="nav-link nav-departments">
                         <i class="nav-icon fas fa-th-list"></i>

@@ -63,6 +63,7 @@
                 <h5 class="card-title text-center text-dark"><b>Inscription</b></h5>
                 </div>
                 <div class="card-body">
+                    
                     <form action="" id="registration-form">
                         <input type="hidden" name="id">
                         <div class="row">
@@ -159,10 +160,11 @@
                             <div class="col-lg-12">
                                 <div class="form-group text-center">
                                     <button class="btn btn-success" >S'Inscrire</button>
-                                    <a href="index.php" style="text-align:center" class="btn btn-info">Retour à l'Accueil</a>
+                                    <a href="index.php" style="text-align:center" class="btn btn-info">Accueil</a>
                                 </div>
                             </div>
                         </div>
+                    
                     </form>
                 </div>
             </div>
