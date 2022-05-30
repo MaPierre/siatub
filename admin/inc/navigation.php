@@ -84,6 +84,7 @@
                     <?php endif; ?>
 
                   </ul>
+                  <a href="exportThese.php">Exporter</a>
                 </nav>
                 <!-- /.sidebar-menu -->
               </div>
