@@ -21,8 +21,8 @@ if(isset($_GET['id'])){
     <div class="col-12">
         <div class="card card-outline card-primary shadow rounded-0">
             <div class="card-body rounded-0">
-                <h2>Liste d'archives de <?= isset($department['name']) ? $department['name'] : "" ?> </h2>
-                <p><mark><b><?= isset($department['description']) ? $department['description'] : "" ?></b></mark></p>
+                <center><h2>Liste d'archives de thèses de mémoire de <?= isset($department['name']) ? $department['name'] : "" ?> </h2></center>
+                <center><p><mark><b><?= isset($department['description']) ? $department['description'] : "" ?></b></mark></p></center>
                 <hr class="bg-navy">
                 <?php 
                 $id = isset($_GET['id']) ? $_GET['id'] : '';

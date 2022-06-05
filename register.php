@@ -46,11 +46,25 @@
       width: 100% !important;
       max-width:unset !important
     } */
+
+    .bg-navy{
+        background-color:#dc3545;
+    }
+    img {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
   </style>
 <div class="h-100 d-flex  align-items-center w-100" id="login">
     <div class="col-6 h-100 d-flex align-items-center justify-content-center">
       <div class="w-100">
-        <center><img src="<?= validate_image($_settings->info('logo')) ?>" alt="" id="logo-img"></center>
+        <img src="<?= validate_image($_settings->info('logo')) ?>" alt="" >
         <center><h3 class="py-2 login-title"><?php echo $_settings->info('short_name')?></h3></center>
        </div>
       
@@ -192,7 +206,7 @@
     $('#department_id').change(function(){
         var did = $(this).val()
         $('#curriculum_id').html("")
-        if(!!cur_arr[did]){
+        if(!cur_arr[did]){
             Object.keys(cur_arr[did]).map(k=>{
                 var opt = $("<option>")
                     opt.attr('value',cur_arr[did][k].id)

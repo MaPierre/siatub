@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="card card-outline card-primary shadow rounded-0">
             <div class="card-body rounded-0">
-                <h2>Liste d'archives des thèses</h2>
+                <center><h2>Liste d'archives des thèses de mémoire</h2></center>
                 <hr class="bg-navy">
                 <?php 
                 $limit = 10;

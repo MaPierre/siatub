@@ -215,8 +215,8 @@ label.star:before {
 
 .site-title {
     font-size: 5em !important;
-    color: white !important;
-    text-shadow: 4px 5px 3px #68717a !important;
+    color: rgb(247, 239, 239) !important;
+    text-shadow: 4px 5px 3px #0bad4f !important;
 }
 
 #top-header:before {
