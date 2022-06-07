@@ -37,8 +37,8 @@
           <div style="text-align: center;">
             <?php if($_settings->userdata('id') > 0): ?>
               <span class="mx-2"><img src="<?= validate_image($_settings->userdata('avatar')) ?>" alt="User Avatar" id="student-img-avatar"></span>
-              <span class="mx-2">Bonjour  <?= !empty($_settings->userdata('firstname')) ? $_settings->userdata('firstname') : $_settings->userdata('username') ?></span>
-              <span class="mx-1"><a href="<?= base_url.'classes/Login.php?f=student_logout' ?>"><i class="fa fa-power-off"></i>Déconnexion</a></span>
+              <span class="mx-2">Vous êtes <?= !empty($_settings->userdata('lastname')) ? $_settings->userdata('lastname') : $_settings->userdata('username') ?>  <?= !empty($_settings->userdata('firstname')) ? $_settings->userdata('firstname') : $_settings->userdata('username') ?></span>
+              <span class="mx-1"><a href="<?= base_url.'classes/Login.php?f=student_logout' ?>"><i class="fa fa-power-off" style='color: red'></i>  Déconnexion</a></span>
             <?php else: ?>
               <a href="./register.php" class="mx-2 text-light me-2">Inscription || Etudiant</a>
               <a href="./login.php" class="mx-2 text-light me-2">Connexion || Etudiant</a>
