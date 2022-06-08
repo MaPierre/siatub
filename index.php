@@ -54,7 +54,7 @@
         </script>
         <?php endif;?>
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper pt-5" style="">
+        <div class="content-wrapper pt-5">
             <?php if($page == "home" || $page == "about_us"): ?>
             <div id="header" class="shadow mb-4">
                 <div class="d-flex justify-content-center h-100 w-100 align-items-center flex-column px-3">
