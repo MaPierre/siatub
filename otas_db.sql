@@ -82,7 +82,7 @@ INSERT INTO `curriculum_list` (`id`, `department_id`, `name`, `description`, `st
 (12, 9, 'HE', 'hydroélectrique et environnement', 1, '2021-12-21 22:55:22', NULL),
 (13, 10, 'IPA MATHS', 'Dans cette département on enseigne les mathétiques utilisés dans l\'enseignement primaire et secondqire', 1, '2022-01-31 21:17:23', '2022-01-31 21:17:40');
 
--- --------------------------------------------------------
+
 
 --
 -- Structure de la table `department_list`
@@ -94,7 +94,7 @@ CREATE TABLE `department_list` (
   `description` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp()
+  `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp(),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
