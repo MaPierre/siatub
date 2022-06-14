@@ -312,7 +312,7 @@ nav.text-light .nav-link {
 
 .list-group:empty:before {
     color: #505050;
-    content: "List is Empty";
+    content: "Lal liste est vide";
     text-align: center;
     width: calc(100%)
 }
