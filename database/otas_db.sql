@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 13, 2021 at 07:51 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Hôte : 127.0.0.1
+-- Généré le : mar. 14 juin 2022 à 18:45
+-- Version du serveur :  10.4.13-MariaDB
+-- Version de PHP : 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `otas_db`
+-- Base de données : `otas_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `archive_list`
+-- Structure de la table `archive_list`
 --
 
 CREATE TABLE `archive_list` (
@@ -44,18 +44,24 @@ CREATE TABLE `archive_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `archive_list`
+-- Déchargement des données de la table `archive_list`
 --
 
 INSERT INTO `archive_list` (`id`, `archive_code`, `curriculum_id`, `year`, `title`, `abstract`, `members`, `banner_path`, `document_path`, `status`, `student_id`, `date_created`, `date_updated`) VALUES
-(1, '2021120001', 1, 2021, 'Sample Project 101', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit at ipsum vitae malesuada. Fusce vitae bibendum diam. Praesent non eros purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et semper velit, pharetra efficitur eros. Aenean vel dignissim eros, sit amet pellentesque dolor. Quisque tincidunt ultricies velit sit amet fringilla. Nunc id lobortis diam, nec finibus neque. Curabitur faucibus feugiat placerat. Nunc at auctor nisi. Nunc maximus cursus mi a lacinia. Fusce eget maximus metus. Duis a tincidunt turpis. Integer dictum suscipit fringilla. Nam a eros arcu.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;b&gt;Project Manager&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;-John D Smith&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Members:&nbsp;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;-James Miller&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;-Mike Williams&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;-George Wilson&lt;/b&gt;&lt;/p&gt;', 'uploads/banners/archive-1.png?v=1639208103', 'uploads/pdf/archive-1.pdf?v=1639208103', 1, 1, '2021-12-11 14:57:22', '2021-12-11 16:07:44'),
-(2, '2021120002', 1, 2020, 'Sample 102', '&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;In hac habitasse platea dictumst. Curabitur commodo nunc ac diam laoreet tempor. Donec sollicitudin lorem ullamcorper pretium ultrices. In varius risus in erat bibendum commodo. Ut volutpat est a mi volutpat molestie. In blandit, leo ut gravida vulputate, metus enim rutrum nunc, id mollis felis libero eu enim. Aenean placerat quis sapien sit amet blandit. Sed nec lorem efficitur, congue lorem vitae, egestas justo. Cras pulvinar, sapien vitae maximus porta, nibh libero porta risus, lobortis porta ante sapien eu massa.&lt;/p&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;Aliquam laoreet condimentum felis eu tristique. Sed a massa nulla. Donec aliquet id ante vel porta. Vestibulum maximus dictum aliquam. Sed molestie lobortis ultrices. Nunc commodo dui nunc, a tincidunt lacus molestie eget. Nullam metus enim, accumsan ac iaculis et, sollicitudin vitae erat. Praesent molestie imperdiet libero, vel congue velit fringilla quis. Suspendisse sollicitudin aliquet enim nec elementum. Morbi nec aliquet mauris. Donec eleifend metus ex.&lt;/p&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;In sollicitudin elementum ante, ut elementum tortor porttitor sit amet. Vestibulum vehicula scelerisque porta. Maecenas vestibulum purus orci, in imperdiet velit congue fermentum. Nulla aliquam ante ut erat sagittis, et porta arcu condimentum. Praesent scelerisque nunc vel felis malesuada venenatis. Donec blandit mauris eros, eget placerat nunc convallis a. Etiam ac elementum arcu. In varius fringilla massa, at volutpat nisi blandit vel. In hac habitasse platea dictumst. Nunc blandit venenatis felis, a mattis nunc. Vestibulum a tempus mi. In interdum semper laoreet. Ut vitae urna arcu. Suspendisse ac arcu quam.&lt;/p&gt;', '&lt;ul&gt;&lt;li&gt;Sample 101&lt;/li&gt;&lt;li&gt;Sample 102&lt;/li&gt;&lt;li&gt;Sample 103&lt;/li&gt;&lt;li&gt;Sample 104&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;', 'uploads/banners/archive-3.png?v=1639212829', 'uploads/pdf/archive-3.pdf?v=1639212829', 1, 1, '2021-12-11 16:53:48', '2021-12-13 14:21:11'),
-(3, '2021120003', 1, 2020, 'Online Point of Sale System for XYZ Corp.', '&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;Curabitur a lorem vitae arcu tincidunt suscipit. Vivamus posuere sodales diam, iaculis tempus sem rhoncus ac. Aenean elementum dolor sed augue gravida, vel ultrices mi sollicitudin. Sed semper sapien non tellus gravida imperdiet. Ut condimentum libero elementum ligula congue, rhoncus euismod orci ultricies. Suspendisse potenti. Vivamus rhoncus iaculis justo, non ultricies odio iaculis malesuada. Vivamus vitae odio nec est consectetur elementum. Nam et tellus pellentesque, efficitur nibh nec, sodales nulla. Phasellus vel nunc orci. Vestibulum vitae libero felis.&lt;/p&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;Fusce tellus odio, pellentesque id justo at, euismod eleifend nulla. Sed at dui non dolor porta tempus vel at justo. Curabitur condimentum, ipsum eu vehicula eleifend, lectus libero rhoncus risus, mollis porta nulla tortor vitae felis. Cras molestie lectus diam, fermentum posuere tellus facilisis ac. Nulla eu ante venenatis orci egestas tempor. Sed sed ante nisl. Nulla vitae risus quam. Donec eu neque eget urna pellentesque maximus. Mauris et lacus elit. Vivamus ligula leo, rutrum vitae semper id, gravida in dui. Maecenas augue arcu, egestas non dolor ut, fermentum rutrum sem. Duis a augue et mauris efficitur finibus nec nec neque. Nulla pulvinar, lorem sed efficitur pulvinar, nunc ex pellentesque eros, ac volutpat mauris felis sed nunc. Phasellus porta quam a nulla bibendum, a volutpat nisi tincidunt. Fusce sed semper ante, ullamcorper varius eros. In feugiat est sit amet mi accumsan, vel tempus eros pulvinar.&lt;/p&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px;&quot;&gt;Aenean rhoncus massa vel convallis suscipit. Etiam pharetra, tortor vitae ornare tincidunt, ipsum purus blandit elit, a interdum libero felis id lectus. Curabitur eleifend pulvinar eros non mollis. Phasellus porttitor sollicitudin metus quis congue. Maecenas sollicitudin fermentum ullamcorper. Aenean blandit vehicula diam, a porta nisl auctor sed. Phasellus dignissim tristique mi et faucibus.&lt;/p&gt;', '&lt;p&gt;&lt;b&gt;Project Manager&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Claire Blake&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;QA&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Samantha Lou&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;Programmers&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;James Dein&lt;/li&gt;&lt;li&gt;Michael Bennet&lt;/li&gt;&lt;li&gt;Jenny Cooper&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;b&gt;Researchers&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ana Mae Clayton&lt;/li&gt;&lt;li&gt;Cynthia Anthony&lt;/li&gt;&lt;/ul&gt;', 'uploads/banners/archive-3.png?v=1639377036', 'uploads/pdf/archive-3.pdf?v=1639377036', 1, 3, '2021-12-13 14:30:35', '2021-12-13 14:34:05');
+(4, '2021120004', 10, 2021, 'SYSTEME DE GESTION DES RENDEZ-VOUS DES PATIENTS', '&lt;p&gt;est un systeme qui va permettre de gerer les patients dans un hopital&lt;/p&gt;', '&lt;p&gt;1.Pierre&lt;/p&gt;&lt;p&gt;2.Pacifique&lt;/p&gt;', 'uploads/banners/archive-4.png?v=1639773933', 'uploads/pdf/archive-4.pdf?v=1639773933', 1, 4, '2021-12-17 22:45:33', '2021-12-17 22:46:44'),
+(6, '2021120001', 10, 2021, 'power daddy,rich daddy', '&lt;p&gt;il parle comment les p&egrave;res pauvres&amp;nbsp; et les p&egrave;res riches se comportent devant leurs enfants&lt;/p&gt;', '&lt;p&gt;1.KIOSAKI ROBERT&lt;/p&gt;', 'uploads/banners/archive-6.png?v=1639928983', 'uploads/pdf/archive-6.pdf?v=1639928983', 1, 5, '2021-12-19 17:49:42', '2021-12-19 17:50:50'),
+(7, '2021120002', 10, 2021, 'la beauté', '&lt;p&gt;c\'est un livre qui nous parle comment avoir la beaut&eacute; naturelle&lt;/p&gt;', '&lt;p&gt;1.Pierre&lt;/p&gt;', 'uploads/banners/archive-7.png?v=1640071683', 'uploads/pdf/archive-7.pdf?v=1640071683', 1, 4, '2021-12-21 09:28:03', '2021-12-21 22:00:54'),
+(8, '2021120003', 11, 2021, 'Controle des courses de 100m', '&lt;p&gt;c\'est un syst&egrave;me qui va aider &agrave; automatiser les arriv&eacute;es en course de 100m&lt;/p&gt;', '&lt;p&gt;1.BIRUKUNDI Annah&lt;/p&gt;&lt;p&gt;2.IRANZI Alain&lt;/p&gt;', 'uploads/banners/archive-8.png?v=1640890212', 'uploads/pdf/archive-8.pdf?v=1640890212', 1, 6, '2021-12-30 20:50:11', '2021-12-30 20:53:43'),
+(9, '2021120005', 10, 2021, 'Data Mining', '&lt;p&gt;c\'est une th&egrave;se qui parle la fouille des donn&eacute;es&lt;/p&gt;', '&lt;p&gt;1.Longin IRAMBONA&lt;/p&gt;', 'uploads/banners/archive-9.png?v=1640963985', 'uploads/pdf/archive-9.pdf?v=1640963985', 1, 4, '2021-12-31 17:19:44', '2021-12-31 17:21:32'),
+(10, '2022010001', 10, 2022, 'Un système automatisé de gestion de chaleur d\'une maison', '&lt;p&gt;c\'est un syst&egrave;me de domotique construit grace &agrave; l\'arduino qui va permettre de g&eacute;rer la chaleur int&eacute;rieur d\'une maison d\'une fa&ccedil;con automatique&lt;/p&gt;', '&lt;p&gt;1.Dr Hilaire NKUZIMANA&lt;/p&gt;&lt;p&gt;2.Dr Th&eacute;rence IGIRANEZA&lt;/p&gt;', 'uploads/banners/archive-10.png?v=1641062695', 'uploads/pdf/archive-10.pdf?v=1641062695', 1, 4, '2022-01-01 20:44:54', '2022-01-01 20:47:06'),
+(11, '2022020001', 11, 2022, 'Machine learning', '&lt;p&gt;Cette th&egrave;se parle de l\'utilisation de l\'intelligence artificielle en impl&eacute;mentant Machine learning pour la fouille des donn&eacute;es ,pr&eacute;diction du futur&lt;/p&gt;', '&lt;p&gt;1.Ndayiziga Annonciatte&lt;/p&gt;', 'uploads/banners/archive-11.png?v=1645308014', 'uploads/pdf/archive-11.pdf?v=1645308014', 1, 6, '2022-02-20 00:00:13', '2022-02-20 00:01:48'),
+(12, '2022060001', 11, 2022, 'informatique pour les enfants', '&lt;p&gt;Ce livre va etre utiliser &agrave; enseigner les enfants&amp;nbsp; &agrave; avoir la logique de la programmation au bas age&lt;/p&gt;', '&lt;p&gt;1.Directeur de M&eacute;moire :Dr Hilaire NKUNZIMANA&lt;/p&gt;&lt;p&gt;2.Secr&eacute;taire du Jury:Dr Mich&egrave;le MUKESHIMANA&lt;/p&gt;', 'uploads/banners/archive-12.png?v=1654772018', 'uploads/pdf/archive-12.pdf?v=1654772019', 1, 8, '2022-06-09 12:53:37', '2022-06-09 12:56:21'),
+(13, '2022060002', 11, 2022, 'Conception et Réalisation d\'un Système Intelligent d\'Archivage des thèmes de mémoire à l\'Université du Burundi', '&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-size:13.0pt;line-height:115%;font-family:\r\n&amp;quot;Times New Roman&amp;quot;,serif&quot;&gt;Ce projet s\'intitule &lt;b&gt;syst&egrave;me Intelligent d\'archivage des th&egrave;ses en ligne &agrave; l&rsquo;universit&eacute; du\r\nBurundi(SIATUB) en sigle&lt;/b&gt; et a &eacute;t&eacute; d&eacute;velopp&eacute; en utilisant PHP et MySQL\r\nDatabase. Il s\'agit d\'une application Web qui fournit une plate-forme en ligne\r\npour stocker la th&egrave;se ou les projets de synth&egrave;se des &eacute;tudiants. L\'objectif\r\nprincipal de cette application est de donner aux &eacute;tudiants d\'une certaine\r\nuniversit&eacute; ou coll&egrave;ge un acc&egrave;s en ligne pour stocker leurs projets de derni&egrave;re\r\nann&eacute;e et de permettre aux &eacute;tudiants de premi&egrave;re ann&eacute;e de trouver des r&eacute;f&eacute;rences\r\net des id&eacute;es pour leur futur ou prochain projet de derni&egrave;re ann&eacute;e. Le syst&egrave;me a\r\n&eacute;t&eacute; &eacute;crit en PHP/OOP (programmation orient&eacute;e objet) et poss&egrave;de de multiples\r\ncaract&eacute;ristiques et fonctionnalit&eacute;s li&eacute;es &agrave; ce type de syst&egrave;me. Cela a des\r\nfonctionnalit&eacute;s conviviales et une interface utilisateur agr&eacute;able utilisant le\r\ncadre Bootstrap et le mod&egrave;le AdminLTE.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;', '&lt;ol&gt;&lt;li&gt;Pr&eacute;sident du Jury:Pr. Dr. J&eacute;r&eacute;mie NDIKUMAGEGE&lt;/li&gt;&lt;li&gt;Membre du Jury:Dr. Mich&egrave;le MUKESHIMANA&lt;/li&gt;&lt;li&gt;Directeur de m&eacute;moire: Dr. Hilaire NKUNZIMANA&lt;/li&gt;&lt;/ol&gt;', 'uploads/banners/archive-13.png?v=1655223261', 'uploads/pdf/archive-13.pdf?v=1655223263', 1, 8, '2022-06-14 18:14:20', '2022-06-14 18:16:22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `curriculum_list`
+-- Structure de la table `curriculum_list`
 --
 
 CREATE TABLE `curriculum_list` (
@@ -69,22 +75,24 @@ CREATE TABLE `curriculum_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `curriculum_list`
+-- Déchargement des données de la table `curriculum_list`
 --
 
 INSERT INTO `curriculum_list` (`id`, `department_id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
-(1, 5, 'BSIS', 'Bachelor of Science in Information Systems', 1, '2021-12-07 10:10:20', '2021-12-07 10:12:20'),
-(2, 5, 'BSIT', 'Bachelor of Science in Information Technology', 1, '2021-12-07 10:10:56', NULL),
-(3, 2, 'BEEd', 'Bachelor of Elementary Education', 1, '2021-12-07 10:12:50', NULL),
-(4, 2, 'BSEd', 'Bachelor of Secondary Education', 1, '2021-12-07 10:13:10', NULL),
-(5, 2, 'BSNEd', 'Bachelor in Special Needs Education', 1, '2021-12-07 10:14:05', NULL),
-(6, 6, 'BSCE', 'Bachelor of Science in Civil Engineering', 1, '2021-12-07 10:14:26', NULL),
-(7, 6, 'BS Computer Engineering', 'Bachelor of Science in Computer Engineering', 1, '2021-12-07 10:15:28', NULL);
+(10, 7, 'GI', 'Génie Informatique', 1, '2021-12-17 22:40:53', NULL),
+(11, 8, 'EB', 'Entrainement Basketball', 1, '2021-12-17 22:41:30', NULL),
+(12, 9, 'HE', 'hydroélectrique et environnement', 1, '2021-12-21 22:55:22', NULL),
+(13, 10, 'IPA MATHS', 'Dans cette département on enseigne les mathétiques utilisés dans l\'enseignement primaire et secondaire', 1, '2022-01-31 21:17:23', '2022-03-16 14:08:26'),
+(14, 11, 'Finance et Comptabilité', '', 1, '2022-05-25 22:16:48', NULL),
+(15, 11, 'marketing et Stratégies', '', 1, '2022-05-25 22:17:19', NULL),
+(16, 12, 'Economie Publique et Planification', '', 1, '2022-05-25 22:18:48', NULL),
+(17, 12, 'Economie Monétaire et Bancaire', '', 1, '2022-05-25 22:19:15', NULL),
+(18, 12, 'Economie Internationale', '', 1, '2022-05-25 22:19:41', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `department_list`
+-- Structure de la table `department_list`
 --
 
 CREATE TABLE `department_list` (
@@ -97,21 +105,22 @@ CREATE TABLE `department_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `department_list`
+-- Déchargement des données de la table `department_list`
 --
 
 INSERT INTO `department_list` (`id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'College of Industrial Technology', 'Develop world-class industrial workers and middle-level managers equipped with scientific knowledge, technological skills, and ethical work values to achieve a desirable quality of life.', 1, '2021-12-07 09:28:16', '2021-12-07 09:36:07'),
-(2, 'College of Education', 'Implement Teacher Education Programs for the elementary and secondary levels and endeavor to achieve quality and excellence, relevance and responsiveness, equity and access, and efficiency and effectiveness in instruction, research, extension, and production.', 1, '2021-12-07 09:28:33', '2021-12-07 09:46:57'),
-(3, 'College of Arts and Sciences', 'Develop and implement programs in Liberal Arts and Sciences to achieve academic excellence and competencies geared towards the total development of the learners in their specialized fields.', 1, '2021-12-07 09:34:11', NULL),
-(4, 'College of Business Management and Accountancy', 'College of Business Management and Accountancy', 1, '2021-12-07 09:34:55', NULL),
-(5, 'College of Computer Studies', 'Develop creative innovators with the confidence and courage to seize and transform opportunities for the benefit of the society.', 1, '2021-12-07 09:35:19', '2021-12-07 09:36:35'),
-(6, 'College of Engineering', 'To develop scientific and technical knowledge anchored on sustainable fisheries productivity and promote linkages and networking in the implementation of fisheries programs and projects.', 1, '2021-12-07 09:37:04', NULL);
+(7, 'TIC', 'Technologies de l\'information et de la  communication', 1, '2021-12-17 22:39:02', '2021-12-21 22:33:48'),
+(8, 'IEPS', 'Institut d\'Education Physique Supérieur', 1, '2021-12-17 22:39:55', NULL),
+(9, 'GCE', 'génie civil et environnement', 1, '2021-12-21 22:53:59', '2022-05-26 14:23:49'),
+(10, 'IPA', 'Institut des pédagogies appliquées', 1, '2022-01-31 21:16:13', '2022-01-31 22:27:27'),
+(11, 'Département de Gestion ', 'C\'est un département de la Faculté des Sciences Economiques et de Gestion', 1, '2022-05-25 22:13:08', '2022-05-25 22:16:17'),
+(12, 'Economie Politique', 'Département de la Faculté des Sciences Economiques et de Gestion\r\n', 1, '2022-05-25 22:18:18', NULL),
+(13, 'Département d’Economie Rurale', 'Département de la Faculté des Sciences Economiques et de Gestion', 1, '2022-05-25 22:20:35', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student_list`
+-- Structure de la table `student_list`
 --
 
 CREATE TABLE `student_list` (
@@ -131,17 +140,20 @@ CREATE TABLE `student_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `student_list`
+-- Déchargement des données de la table `student_list`
 --
 
 INSERT INTO `student_list` (`id`, `firstname`, `middlename`, `lastname`, `department_id`, `curriculum_id`, `email`, `password`, `gender`, `status`, `avatar`, `date_created`, `date_updated`) VALUES
-(1, 'John', 'D', 'Smith', 5, 1, 'jsmith@sample.com', '1254737c076cf867dc53d60a0364f38e', 'Male', 1, 'uploads/student-1.png?v=1639202693', '2021-12-11 12:50:03', '2021-12-11 14:04:53'),
-(3, 'Claire', 'C', 'Blake', 5, 1, 'cblake@sample.com', '4744ddea876b11dcb1d169fadf494418', 'Female', 1, 'uploads/student-3.png?v=1639377518', '2021-12-13 10:42:51', '2021-12-13 14:38:38');
+(4, 'Pierre', 'Stein', 'Manirakoze', 7, 10, 'irakozepierre2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, 'uploads/student-4.png?v=1639774267', '2021-12-17 22:42:17', '2021-12-19 14:32:54'),
+(5, 'PACIFIQUE', 'MOSOZI', 'NKENGURUTSE', 7, 10, 'nkengu@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, '', '2021-12-19 17:35:14', '2021-12-19 17:38:37'),
+(6, 'Annociatte', '', 'NDAYIZIGA', 8, 11, 'ndayiziga@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Female', 1, '', '2021-12-30 20:44:31', '2021-12-30 20:46:52'),
+(7, 'Pierre', '', 'NKURUNZIZA', 8, 11, 'pierre2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, '', '2021-12-31 17:39:28', '2021-12-31 17:40:53'),
+(8, 'Jean ', 'Muzungu', 'IRAMBONA', 8, 11, 'jean@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, 'uploads/student-8.png?v=1652786424', '2021-12-31 17:49:49', '2022-05-30 12:48:36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `system_info`
+-- Structure de la table `system_info`
 --
 
 CREATE TABLE `system_info` (
@@ -151,26 +163,26 @@ CREATE TABLE `system_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `system_info`
+-- Déchargement des données de la table `system_info`
 --
 
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
-(1, 'name', 'Online Thesis Archiving System - PHP'),
-(6, 'short_name', 'OTAS - PHP'),
-(11, 'logo', 'uploads/logo-1638840281.png'),
+(1, 'name', 'Système Intelligent  d&apos;Archivage des Thèmes de mémoire   à l&apos;Université du Burundi'),
+(6, 'short_name', 'SIATUB'),
+(11, 'logo', 'uploads/logo-1647512341.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
-(14, 'cover', 'uploads/cover-1638840281.png'),
+(14, 'cover', 'uploads/cover-1647512158.png'),
 (15, 'content', 'Array'),
-(16, 'email', 'info@university101.com'),
-(17, 'contact', '09854698789 / 78945632'),
+(16, 'email', 'irakozepierre2@gmail.com'),
+(17, 'contact', '79040907 - 68211201'),
 (18, 'from_time', '11:00'),
 (19, 'to_time', '21:30'),
-(20, 'address', 'Under the Tree, Here Street, There City, Anywhere 1014');
+(20, 'address', 'Bujumbura Mairie-Quartier Rohero,Avenue de l&apos;Université');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -189,19 +201,21 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `password`, `avatar`, `last_login`, `type`, `status`, `date_added`, `date_updated`) VALUES
-(1, 'Adminstrator', NULL, 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/student-1.png?v=1639202560', NULL, 1, 1, '2021-01-20 14:02:37', '2021-12-11 14:02:40'),
-(2, 'Claire', NULL, 'Blake', 'cblake', '4744ddea876b11dcb1d169fadf494418', 'uploads/avatar-2.png?v=1639377482', NULL, 2, 1, '2021-12-13 14:38:02', '2021-12-13 14:38:02');
+(1, 'Adminstrator', NULL, 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-1.png?v=1640962158', NULL, 1, 1, '2021-01-20 14:02:37', '2021-12-31 17:03:37'),
+(3, 'Beathe', NULL, 'BIGIRIMANA', 'beathe', '25f9e794323b453885f5181f1b624d0b', 'uploads/avatar-3.png?v=1639774383', NULL, 2, 1, '2021-12-17 22:53:03', '2021-12-17 22:53:03'),
+(4, 'Nicodème', NULL, 'NTUYAHAGA', 'ntuya', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 2, 1, '2021-12-21 09:02:34', NULL),
+(5, 'Pierre', NULL, 'MANIRAKOZE', 'pierre', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 1, 1, '2021-12-31 16:47:36', '2022-05-16 23:08:30');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `archive_list`
+-- Index pour la table `archive_list`
 --
 ALTER TABLE `archive_list`
   ADD PRIMARY KEY (`id`),
@@ -209,97 +223,99 @@ ALTER TABLE `archive_list`
   ADD KEY `student_id` (`student_id`);
 
 --
--- Indexes for table `curriculum_list`
+-- Index pour la table `curriculum_list`
 --
 ALTER TABLE `curriculum_list`
   ADD PRIMARY KEY (`id`),
   ADD KEY `department_id` (`department_id`);
 
 --
--- Indexes for table `department_list`
+-- Index pour la table `department_list`
 --
 ALTER TABLE `department_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `student_list`
+-- Index pour la table `student_list`
 --
 ALTER TABLE `student_list`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`) USING HASH,
+  ADD UNIQUE KEY `email_2` (`email`) USING HASH,
+  ADD UNIQUE KEY `email_3` (`email`) USING HASH,
   ADD KEY `department_id` (`department_id`),
   ADD KEY `curriculum_id` (`curriculum_id`);
 
 --
--- Indexes for table `system_info`
+-- Index pour la table `system_info`
 --
 ALTER TABLE `system_info`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `archive_list`
+-- AUTO_INCREMENT pour la table `archive_list`
 --
 ALTER TABLE `archive_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `curriculum_list`
+-- AUTO_INCREMENT pour la table `curriculum_list`
 --
 ALTER TABLE `curriculum_list`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT pour la table `department_list`
+--
+ALTER TABLE `department_list`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT pour la table `student_list`
+--
+ALTER TABLE `student_list`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `department_list`
---
-ALTER TABLE `department_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `student_list`
---
-ALTER TABLE `student_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `system_info`
+-- AUTO_INCREMENT pour la table `system_info`
 --
 ALTER TABLE `system_info`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `archive_list`
+-- Contraintes pour la table `archive_list`
 --
 ALTER TABLE `archive_list`
   ADD CONSTRAINT `archive_list_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student_list` (`id`) ON DELETE SET NULL;
 
 --
--- Constraints for table `curriculum_list`
+-- Contraintes pour la table `curriculum_list`
 --
 ALTER TABLE `curriculum_list`
   ADD CONSTRAINT `curriculum_list_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `department_list` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `student_list`
+-- Contraintes pour la table `student_list`
 --
 ALTER TABLE `student_list`
   ADD CONSTRAINT `student_list_ibfk_1` FOREIGN KEY (`curriculum_id`) REFERENCES `curriculum_list` (`id`) ON DELETE CASCADE,
