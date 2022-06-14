@@ -21,7 +21,7 @@ if(isset($_GET['id'])){
     <div class="col-12">
         <div class="card card-outline card-primary shadow rounded-0">
             <div class="card-body rounded-0">
-                 <center> <h2>Liste d'archives de thèses de mémoire  pour la filière de <?= isset($curriculum['name']) ? $curriculum['name'] : "" ?> </h2></center>
+                 <center> <h2>Liste d'archives de thèmes de mémoire  pour la filière de <?= isset($curriculum['name']) ? $curriculum['name'] : "" ?> </h2></center>
                 <center><p><mark><small><?= isset($curriculum['description']) ? $curriculum['description'] : "" ?></small></mark></p></center>
                 <hr class="bg-navy">
                 <?php 
@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
             <div class="card-footer clearfix rounded-0">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-md-6"><span class="text-muted">Affichage des thèses: <?= $archives->num_rows ?></span></div>
+                        <div class="col-md-6"><span class="text-muted">Affichage des thèmes: <?= $archives->num_rows ?></span></div>
                         <div class="col-md-6">
                             <ul class="pagination pagination-sm m-0 float-right">
                                 <li class="page-item"><a class="page-link" href="./?page=projects_per_curriculum&id=<?= $id ?>&p=<?= $page - 1 ?>" <?= $page == 1 ? 'disabled' : '' ?>>«</a></li>

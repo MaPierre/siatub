@@ -35,7 +35,7 @@
                       <a href="<?php echo base_url ?>admin/?page=archives" class="nav-link nav-archives">
                         <i class="nav-icon fas fa-archive"></i>
                         <p>
-                          Archives de thèses
+                          Archives de thèmes
                         </p>
                       </a>
                     </li>

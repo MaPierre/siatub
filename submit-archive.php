@@ -64,7 +64,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="members" class="control-label text-navy">Membres du projet</label>
+                                <label for="members" class="control-label text-navy">Membres du Jury</label>
                                 <textarea rows="3" name="members" id="members" placeholder="membres" class="form-control form-control-border summernote-list-only" required><?= isset($members) ? html_entity_decode($members) : "" ?></textarea>
                             </div>
                         </div>
