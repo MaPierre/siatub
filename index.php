@@ -60,7 +60,7 @@
                 <div class="d-flex justify-content-center h-100 w-100 align-items-center flex-column px-3">
                     <!--<h1 class="w-100 text-center site-title"><?php echo $_settings->info('name') ?></h1>-->
                     <a href="./?page=projects" class="btn btn-lg btn-light rounded-pill w-25"
-                        id="enrollment"><b>Explorer les Projets</b></a>
+                        id="enrollment"><b>Tous les Thèmes</b></a>
                 </div>
             </div>
             <?php endif; ?>
