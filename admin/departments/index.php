@@ -29,7 +29,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date de création</th>
+						<th>Date de publication</th>
 						<th>Nom</th>
 						<th>Description</th>
 						<th>Statut</th>

@@ -31,11 +31,11 @@ if(isset($_GET['id'])){
                 $offset = 10 * ($page - 1);
                 $paginate = " limit {$limit} offset {$offset}";
                 $wheredid = " where department_id = '{$id}' ";
-                $students = $conn->query("SELECT * FROM `student_list` where id in (SELECT student_id FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from curriculum_list {$wheredid} ))");
+                $students = $conn->query("SELECT * FROM `student_list` where id in (SELECT student_id FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from tbl_filieres {$wheredid} ))");
                 $student_arr = array_column($students->fetch_all(MYSQLI_ASSOC),'email','id');
-                $count_all = $conn->query("SELECT * FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from curriculum_list {$wheredid} )")->num_rows;    
+                $count_all = $conn->query("SELECT * FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from tbl_filieres {$wheredid} )")->num_rows;    
                 $pages = ceil($count_all/$limit);
-                $archives = $conn->query("SELECT * FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from curriculum_list {$wheredid} ) order by unix_timestamp(date_created) desc {$paginate}");    
+                $archives = $conn->query("SELECT * FROM archive_list where `status` = 1 and curriculum_id in (SELECT id from tbl_filieres {$wheredid} ) order by unix_timestamp(date_created) desc {$paginate}");    
                 ?>
                 <div class="list-group">
                     <?php 

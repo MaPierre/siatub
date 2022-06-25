@@ -11461,7 +11461,7 @@
        *  @dtopt Language
        *  @name DataTable.defaults.language.searchPlaceholder
        */
-      sSearchPlaceholder: "",
+      sSearchPlaceholder: "Tapez un mot clé",
 
       /**
        * All of the language information can be stored in a file on the

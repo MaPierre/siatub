@@ -156,7 +156,7 @@
                                             <option value="" disabled selected>--Sélectionnez le département d'abord--
                                             </option>
                                             <?php
-                                            $curriculum = $conn->query("SELECT * FROM `curriculum_list` where status = 1 order by `name` asc");
+                                            $curriculum = $conn->query("SELECT * FROM `tbl_filieres` where status = 1 order by `name` asc");
                                             $cur_arr = [];
                                             while ($row = $curriculum->fetch_assoc()) {
                                                 $row['name'] = ucwords($row['name']);

@@ -84,11 +84,11 @@ Class Master extends DBConnection {
 			}
 		}
 		if(empty($id)){
-			$sql = "INSERT INTO `curriculum_list` set {$data} ";
+			$sql = "INSERT INTO `tbl_filieres` set {$data} ";
 		}else{
-			$sql = "UPDATE `curriculum_list` set {$data} where id = '{$id}' ";
+			$sql = "UPDATE `tbl_filieres` set {$data} where id = '{$id}' ";
 		}
-		$check = $this->conn->query("SELECT * FROM `curriculum_list` where `name`='{$name}' and `department_id` = '{department_id}' ".($id > 0 ? " and id != '{$id}'" : ""))->num_rows;
+		$check = $this->conn->query("SELECT * FROM `tbl_filieres` where `name`='{$name}' and `department_id` = '{department_id}' ".($id > 0 ? " and id != '{$id}'" : ""))->num_rows;
 		if($check > 0){
 			$resp['status'] = 'failed';
 			$resp['msg'] = "Le nom du programme existe déjà.";
@@ -113,7 +113,7 @@ Class Master extends DBConnection {
 	}
 	function delete_curriculum(){
 		extract($_POST);
-		$del = $this->conn->query("DELETE FROM `curriculum_list` where id = '{$id}'");
+		$del = $this->conn->query("DELETE FROM `tbl_filieres` where id = '{$id}'");
 		if($del){
 			$resp['status'] = 'success';
 			$this->settings->set_flashdata('success',"Le programme a été supprimé avec succès.");

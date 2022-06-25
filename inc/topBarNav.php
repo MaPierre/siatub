@@ -31,7 +31,7 @@
     padding-top: calc(5em) !important;
 }
 </style>
-<nav class="bg-navy w-100 px-2 py-1 position-fixed top-0" id="login-nav">
+<nav class="bg-success w-100 px-2 py-1 position-fixed top-0" id="login-nav">
     <div class="d-flex justify-content-between w-100">
         <div>
             <span class="mr-2  text-white"><i class="fa fa-phone mr-1"></i> <?= $_settings->info('contact') ?></span>
@@ -46,9 +46,37 @@
             <span class="mx-1"><a href="<?= base_url.'classes/Login.php?f=student_logout' ?>"><i class="fa fa-power-off"
                         style='color: red'></i> Déconnexion</a></span>
             <?php else: ?>
-            <a href="./register.php" class="mx-2 text-light me-2">Inscription || Etudiant</a>
-            <a href="./login.php" class="mx-2 text-light me-2">Connexion || Etudiant</a>
-            <a href="./admin" class="mx-2 text-light">Connexion || Administrateur|Staff</a>
+            <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://www.ub.edu.bi/"
+                    target="_blank" class="mx-2 text-black me-2">
+                    Université du Burundi
+                </a>
+            </button>
+
+            <button type="button" class="btn btn-danger">
+                <a href="./register.php" class="mx-2 text-light me-2">
+                    Inscription
+                    || Etudiant
+                </a>
+            </button>
+            <button type="button" class="btn btn-info">
+                <a href="./login.php" class="mx-2 text-light me-2">
+                    Connexion
+                    ||Etudiant
+                </a>
+            </button>
+
+
+
+            <button type="button" class="btn btn-warning">
+                <a href="./admin" class="mx-2 ">
+                    Connexion ||
+                    Administrateur|Staff
+                </a>
+            </button>
+
+
+
+
             <?php endif; ?>
         </div>
     </div>
@@ -68,7 +96,7 @@
         </button>
 
         <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-            <!-- Left navbar links -->
+            <!-- liens de la barre de navigation inférieure-->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="./" class="nav-link <?= isset($page) && $page =='home' ? "active" : "" ?>">Accueil</a>
@@ -77,6 +105,7 @@
                     <a href="./?page=projects"
                         class="nav-link <?= isset ($page) && $page =='projects' ? "active" : "" ?>">Projets</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_department' ? "active" : "" ?>">Départements</a>
@@ -105,7 +134,7 @@
                 <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow"
                     style="left: 0px; right: inherit;">
                     <?php 
-                    $curriculums = $conn->query("SELECT * FROM curriculum_list where status = 1 order by `name` asc");
+                    $curriculums = $conn->query("SELECT * FROM tbl_filieres where status = 1 order by `name` asc");
                     $cI =  $curriculums->num_rows;
                     while($row = $curriculums->fetch_assoc()):
                       $cI--;
@@ -148,7 +177,8 @@
             <div class="position-relative">
                 <div id="search-field" class="position-absolute">
                     <input type="search" id="search-input" class="form-control rounded-0" required
-                        placeholder="Recherche par mot clé..." value="<?= isset($_GET['q']) ? $_GET['q'] : '' ?>">
+                        placeholder="Titre,Résumé,membres,département,filière,description..."
+                        value="<?= isset($_GET['q']) ? $_GET['q'] : '' ?>">
                 </div>
             </div>
         </div>

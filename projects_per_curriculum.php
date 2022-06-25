@@ -1,7 +1,7 @@
 <?php 
 if(isset($_GET['id'])){
 
-    $qry = $conn->query("SELECT * FROM curriculum_list where `status` = 1 and id = '{$_GET['id']}' ");
+    $qry = $conn->query("SELECT * FROM tbl_filieres where `status` = 1 and id = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
         foreach($qry->fetch_assoc() as $k => $v){
             if(!is_numeric($k)){

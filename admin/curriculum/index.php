@@ -29,7 +29,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date de création</th>
+						<th>Date de publication</th>
 						<th>Domaine d'études</th>
 						<th>Programme d'études</th>
 						<th>Statut</th>
@@ -39,7 +39,7 @@
 				<tbody>
 					<?php 
 						$i = 1;
-						$qry = $conn->query("SELECT c.*, d.name as department from `curriculum_list` c inner join `department_list` d on c.department_id = d.id order by c.`name` asc");
+						$qry = $conn->query("SELECT c.*, d.name as department from `tbl_filieres` c inner join `department_list` d on c.department_id = d.id order by c.`name` asc");
 						while($row = $qry->fetch_assoc()):
 						
 					?>

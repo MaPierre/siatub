@@ -27,7 +27,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date de création</th>
+						<th>Date de publication</th>
 						<th>Code d'archivage</th>
 						<th>Titre du projet</th>
 						<th>Programme d'études</th>
@@ -38,7 +38,7 @@
 				<tbody>
 					<?php 
 						$i = 1;
-						$curriculum = $conn->query("SELECT * FROM curriculum_list where id in (SELECT curriculum_id from `archive_list`)");
+						$curriculum = $conn->query("SELECT * FROM tbl_filieres where id in (SELECT curriculum_id from `archive_list`)");
 						$cur_arr = array_column($curriculum->fetch_all(MYSQLI_ASSOC),'name','id');
 						$qry = $conn->query("SELECT * from `archive_list` order by `year` desc, `title` desc ");
 						while($row = $qry->fetch_assoc()):

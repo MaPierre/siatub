@@ -1,7 +1,7 @@
 <?php
 require_once('../../config.php');
 if(isset($_GET['id'])){
-    $qry = $conn->query("SELECT * FROM `curriculum_list` where id = '{$_GET['id']}'");
+    $qry = $conn->query("SELECT * FROM `tbl_filieres` where id = '{$_GET['id']}'");
     if($qry->num_rows > 0){
         $res = $qry->fetch_array();
         foreach($res as $k => $v){

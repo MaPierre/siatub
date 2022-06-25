@@ -2,7 +2,7 @@
 <?php 
 require_once('../../config.php');
 if(isset($_GET['id']) && $_GET['id'] > 0){
-    $user = $conn->query("SELECT s.*,d.name as department, c.name as curriculum,CONCAT(lastname,', ',firstname,' ',middlename) as fullname FROM student_list s inner join department_list d on s.department_id = d.id inner join curriculum_list c on s.curriculum_id = c.id where s.id ='{$_GET['id']}'");
+    $user = $conn->query("SELECT s.*,d.name as department, c.name as curriculum,CONCAT(lastname,', ',firstname,' ',middlename) as fullname FROM student_list s inner join department_list d on s.department_id = d.id inner join tbl_filieres c on s.curriculum_id = c.id where s.id ='{$_GET['id']}'");
     foreach($user->fetch_array() as $k =>$v){
         $$k = $v;
     }

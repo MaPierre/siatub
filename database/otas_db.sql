@@ -61,10 +61,10 @@ INSERT INTO `archive_list` (`id`, `archive_code`, `curriculum_id`, `year`, `titl
 -- --------------------------------------------------------
 
 --
--- Structure de la table `curriculum_list`
+-- Structure de la table `tbl_filieres`
 --
 
-CREATE TABLE `curriculum_list` (
+CREATE TABLE `tbl_filieres` (
   `id` int(30) NOT NULL,
   `department_id` int(30) NOT NULL,
   `name` text NOT NULL,
@@ -75,10 +75,10 @@ CREATE TABLE `curriculum_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `curriculum_list`
+-- Déchargement des données de la table `tbl_filieres`
 --
 
-INSERT INTO `curriculum_list` (`id`, `department_id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
+INSERT INTO `tbl_filieres` (`id`, `department_id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
 (10, 7, 'GI', 'Génie Informatique', 1, '2021-12-17 22:40:53', NULL),
 (11, 8, 'EB', 'Entrainement Basketball', 1, '2021-12-17 22:41:30', NULL),
 (12, 9, 'HE', 'hydroélectrique et environnement', 1, '2021-12-21 22:55:22', NULL),
@@ -223,9 +223,9 @@ ALTER TABLE `archive_list`
   ADD KEY `student_id` (`student_id`);
 
 --
--- Index pour la table `curriculum_list`
+-- Index pour la table `tbl_filieres`
 --
-ALTER TABLE `curriculum_list`
+ALTER TABLE `tbl_filieres`
   ADD PRIMARY KEY (`id`),
   ADD KEY `department_id` (`department_id`);
 
@@ -269,9 +269,9 @@ ALTER TABLE `archive_list`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `curriculum_list`
+-- AUTO_INCREMENT pour la table `tbl_filieres`
 --
-ALTER TABLE `curriculum_list`
+ALTER TABLE `tbl_filieres`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
@@ -309,16 +309,16 @@ ALTER TABLE `archive_list`
   ADD CONSTRAINT `archive_list_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student_list` (`id`) ON DELETE SET NULL;
 
 --
--- Contraintes pour la table `curriculum_list`
+-- Contraintes pour la table `tbl_filieres`
 --
-ALTER TABLE `curriculum_list`
+ALTER TABLE `tbl_filieres`
   ADD CONSTRAINT `curriculum_list_ibfk_1` FOREIGN KEY (`department_id`) REFERENCES `department_list` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `student_list`
 --
 ALTER TABLE `student_list`
-  ADD CONSTRAINT `student_list_ibfk_1` FOREIGN KEY (`curriculum_id`) REFERENCES `curriculum_list` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `student_list_ibfk_1` FOREIGN KEY (`curriculum_id`) REFERENCES `tbl_filieres` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `student_list_ibfk_2` FOREIGN KEY (`department_id`) REFERENCES `department_list` (`id`) ON DELETE CASCADE;
 COMMIT;
 
