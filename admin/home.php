@@ -1,4 +1,6 @@
-<h1 style="font-size:25px;text-align:center;color:green">Bienvenue au <?php echo $_settings->info('name') ?></h1>
+<div class="container">
+    <h2 style="font-size:25px;text-align:center;color:green">Bienvenue au <?php echo $_settings->info('name') ?></h2>
+</div>
 <hr class="border-info">
 <div class="row">
     <div class="col-12 col-sm-12 col-md-6 col-lg-3 bg-success.bg-gradient">
@@ -99,6 +101,7 @@
         </div>
         <!-- /.info-box -->
     </div>
+
 </div>
 <!DOCTYPE html>
 <html lang="fr">
@@ -107,6 +110,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <style>
+    .container {
+        animation: scrollTxt 10s linear infinite;
+    }
+
+    @keyframes scrollTxt {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+    </style>
 </head>
 
 <body>

@@ -32,8 +32,33 @@
 .welcome-content img {
     margin: .5em;
 }
+
+.def {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    animation: scrollTxt 10s linear infinite;
+}
+
+@keyframes scrollTxt {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
 </style>
+<div class="def">
+    <span>Système Intelligent d'Archivage des Thèmes de mémoire&nbsp;</span>
+    <span>à l'Université du Burundi</span>
+
+</div>
 <div class="col-lg-12 py-5">
+
+
     <div class="contain-fluid">
         <div class="card card-outline card-navy shadow rounded-0">
             <div class="card-body rounded-0">

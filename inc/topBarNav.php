@@ -43,8 +43,14 @@
             <span class="mx-2">Vous êtes
                 <?= !empty($_settings->userdata('lastname')) ? $_settings->userdata('lastname') : $_settings->userdata('username') ?>
                 <?= !empty($_settings->userdata('firstname')) ? $_settings->userdata('firstname') : $_settings->userdata('username') ?></span>
-            <span class="mx-1"><a href="<?= base_url.'classes/Login.php?f=student_logout' ?>"><i class="fa fa-power-off"
-                        style='color: red'></i> Déconnexion</a></span>
+            <span class="mx-1">
+                <button type="button" class="btn btn-danger btn-rounded"> <a
+                        href="<?= base_url.'classes/Login.php?f=student_logout' ?>">
+                        <i class="fa fa-power-off" style='color: green'>
+                        </i> Déconnexion
+
+                    </a></button>
+            </span>
             <?php else: ?>
             <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://www.ub.edu.bi/"
                     target="_blank" class="mx-2 text-black me-2">
