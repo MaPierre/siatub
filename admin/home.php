@@ -112,7 +112,7 @@
     <title>Admin</title>
     <style>
     .container {
-        animation: scrollTxt 10s linear infinite;
+        animation: scrollTxt 20s linear infinite;
     }
 
     @keyframes scrollTxt {

@@ -43,7 +43,7 @@ foreach($user->fetch_array() as $k =>$v){
                                 <dd class="pl-4"><?= $email ?></dd>
                                 <dt class="text-navy">Département:</dt>
                                 <dd class="pl-4"><?= ucwords($department) ?></dd>
-                                <dt class="text-navy">Programme d'études:</dt>
+                                <dt class="text-navy">Filière/Option:</dt>
                                 <dd class="pl-4"><?= ucwords($curriculum) ?></dd>
                             </dl>
                         </div>

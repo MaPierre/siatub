@@ -9,7 +9,7 @@
 </style>
 <div class="card card-outline card-primary">
     <div class="card-header">
-        <h3 class="card-title">thèmes archivées</h3>
+        <h2 class="card-title">Thèmes archivées</h2>
     </div>
     <div class="card-body">
         <div class="container-fluid">

@@ -38,7 +38,7 @@
     width: 100%;
     position: absolute;
     transform: translateY(-50%);
-    animation: scrollTxt 10s linear infinite;
+    animation: scrollTxt 20s linear infinite;
 }
 
 @keyframes scrollTxt {
