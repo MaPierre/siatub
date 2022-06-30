@@ -84,13 +84,25 @@
         <div class="col-6 h-100  bg-gradient bg-success">
             <div class="w-100 d-flex justify-content-center align-items-center h-100 text-navy">
                 <div class="card card-outline card-primary rounded-0 shadow col-lg-10 col-md-10 col-sm-5">
-                    <div class="card-header">
-                        <h5 class="card-title text-center text-dark"><b>Inscription</b></h5>
+                    <div class="card text-center bg-red">
+                        <div class="card-header">
+                            Inscription pour Etudiant
+                        </div>
                     </div>
                     <div class="card-body">
 
                         <form action="" id="registration-form">
                             <input type="hidden" name="id">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" name="matricule" id="matricule" autofocus
+                                            placeholder="Votre matricule" class="form-control form-control-border"
+                                            required>
+                                    </div>
+                                </div>
+
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
@@ -100,21 +112,14 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" name="middlename" id="middlename"
-                                            placeholder="Surnom (optionnel)" class="form-control form-control-border">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
                                         <input type="text" name="lastname" id="lastname" placeholder="Nom"
                                             class="form-control form-control-border" required>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
-                                <div class="form-group col-auto">
+                                <div class="col-lg-6">
                                     <div class="custom-control custom-radio">
                                         <input class="custom-control-input" type="radio" id="genderMale" name="gender"
                                             value="Male" required checked>
@@ -130,12 +135,31 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <span class="text-navy">Université</span>
+                                        <select name="id_universite" id="id_universite"
+                                            class="form-control form-control-border select2" required>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <span class="text-navy">Faculté</span>
+                                        <select name="id_faculte" id="id_faculte"
+                                            class="form-control form-control-border select2" required>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <span class="text-navy">Département</span>
                                         <select name="department_id" id="department_id"
                                             class="form-control form-control-border select2" required>
-                                            <option value="">--Sélection du département--</option>
+
                                             <option value="" disabled></option>
                                             <?php
                                             $department = $conn->query("SELECT * FROM `department_list` where status = 1 order by `name` asc");
@@ -146,15 +170,12 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <span class="text-navy">Programme d'études</span>
+                                        <span class="text-navy">Filière/Option</span>
                                         <select name="curriculum_id" id="curriculum_id"
                                             class="form-control form-control-border select2" required>
-                                            <option value="" disabled selected>--Sélectionnez le département d'abord--
-                                            </option>
+
                                             <?php
                                             $curriculum = $conn->query("SELECT * FROM `tbl_filieres` where status = 1 order by `name` asc");
                                             $cur_arr = [];
@@ -177,15 +198,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="password" name="password" id="password" placeholder="Mot de passe"
                                             class="form-control form-control-border" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="password" id="cpassword" placeholder="Confirmer le mot passe"
                                             class="form-control form-control-border" required>
@@ -251,7 +270,7 @@
             el.hide()
             if ($("#password").val() != $("#cpassword").val()) {
                 el.addClass("alert-danger")
-                el.text("Password does not match.")
+                el.text("Le mot de passe ne correspond pas.")
                 $('#password, #cpassword').addClass("is-invalid")
                 $('#cpassword').after(el)
                 el.show('slow')

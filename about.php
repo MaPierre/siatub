@@ -1,9 +1,13 @@
 <div class="col-12">
     <div class="row my-5 ">
-        <div class="col-md-5">
+        <div class="col-md-6">
             <div class="card card-outline card-navy rounded-0 shadow">
-                <div class="card-header">
-                    <h4 class="card-title">Contacts</h4>
+                <div>
+                    <h4 class="text-center">Contacts</h4>
+                    <center>
+                        <hr class="bg-navy border-navy w-25 border-2">
+                    </center>
+
                 </div>
                 <div class="card-body rounded-0">
                     <dl>
@@ -17,11 +21,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
-            <div class="card rounded-0 card-outline card-navy shadow" >
+        <div class="col-md-6">
+            <div class="card rounded-0 card-outline card-navy shadow">
                 <div class="card-body rounded-0">
                     <h2 class="text-center">Qui sommes-nous?</h2>
-                    <center><hr class="bg-navy border-navy w-25 border-2"></center>
+                    <center>
+                        <hr class="bg-navy border-navy w-25 border-2">
+                    </center>
                     <div>
                         <?= file_get_contents("about_us.html") ?>
                     </div>

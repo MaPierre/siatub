@@ -43,6 +43,7 @@
             <span class="mx-2">Vous êtes
                 <?= !empty($_settings->userdata('lastname')) ? $_settings->userdata('lastname') : $_settings->userdata('username') ?>
                 <?= !empty($_settings->userdata('firstname')) ? $_settings->userdata('firstname') : $_settings->userdata('username') ?></span>
+
             <span class="mx-1">
                 <button type="button" class="btn btn-danger btn-rounded"> <a
                         href="<?= base_url.'classes/Login.php?f=student_logout' ?>">
@@ -52,6 +53,11 @@
                     </a></button>
             </span>
             <?php else: ?>
+            <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://10.10.6.254/"
+                    target="_blank" class="mx-2 text-black me-2">
+                    Catalogue Bibliothécaire
+                </a>
+            </button>
             <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://www.ub.edu.bi/"
                     target="_blank" class="mx-2 text-black me-2">
                     Université du Burundi
@@ -61,21 +67,17 @@
             <button type="button" class="btn btn-danger">
                 <a href="./register.php" class="mx-2 text-light me-2">
                     Inscription
-                    || Etudiant
+
                 </a>
             </button>
             <button type="button" class="btn btn-info">
                 <a href="./login.php" class="mx-2 text-light me-2">
                     Connexion
-                    ||Etudiant
+
                 </a>
             </button>
-
-
-
             <button type="button" class="btn btn-warning">
                 <a href="./admin" class="mx-2 ">
-                    Connexion ||
                     Administrateur|Staff
                 </a>
             </button>
@@ -87,7 +89,7 @@
         </div>
     </div>
 </nav>
-<nav class="main-header navbar navbar-expand navbar-light border-0 navbar-light text-sm" id='top-Nav'>
+<nav class="main-header navbar navbar-expand navbar-red border-0 navbar-light text-sm" id='top-Nav'>
 
     <div class="container">
         <a href="./" class="navbar-brand">
@@ -114,7 +116,8 @@
 
                 <li class="nav-item dropdown">
                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_department' ? "active" : "" ?>">Départements</a>
+                        class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_department' ? "active" : "" ?>">Par
+                        Département</a>
                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow"
                         style="left: 0px; right: inherit;">
                         <?php 
@@ -135,8 +138,8 @@
             </li>
             <li class="nav-item dropdown">
                 <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_curriculum' ? "active" : "" ?>">Programmes
-                    d'études</a>
+                    class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_curriculum' ? "active" : "" ?>">Par
+                    Filière</a>
                 <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow"
                     style="left: 0px; right: inherit;">
                     <?php 
@@ -156,8 +159,8 @@
             </ul>
             </li>
             <li class="nav-item">
-                <a href="./?page=about" class="nav-link <?= isset($page) && $page =='about' ? "active" : "" ?>">Qui
-                    sommes-nous ?</a>
+                <a href="./?page=about" class="nav-link <?= isset($page) && $page =='about' ? "active" : "" ?>">A
+                    Propos</a>
             </li>
             <!-- <li class="nav-item">
                 <a href="#" class="nav-link">Contact</a>

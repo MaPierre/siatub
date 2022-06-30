@@ -18,7 +18,7 @@
                     $search = " and (title LIKE '%{$keyword}%' or abstract  LIKE '%{$keyword}%' or members LIKE '%{$keyword}%' or curriculum_id in (SELECT id from tbl_filieres where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%') or curriculum_id in (SELECT id from tbl_filieres where department_id in (SELECT id FROM department_list where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%'))) ";
                 }
                 $students = $conn->query("SELECT * FROM `student_list` where id in (SELECT student_id FROM archive_list where `status` = 1 {$search})");
-                $student_arr = array_column($students->fetch_all(MYSQLI_ASSOC),'email','id');
+                $student_arr = array_column($students->fetch_all(MYSQLI_ASSOC),'lastname','id');
                 $count_all = $conn->query("SELECT * FROM archive_list where `status` = 1 {$search}")->num_rows;    
                 $pages = ceil($count_all/$limit);
                 $archives = $conn->query("SELECT * FROM archive_list where `status` = 1 {$search} order by unix_timestamp(date_created) desc {$paginate}");    
@@ -40,9 +40,9 @@
                                     class="banner-img img-fluid bg-gradient-dark" alt="Image de la bannière">
                             </div>
                             <div class="col-lg-8 col-md-7 col-sm-12">
-                                <h3 class="text-navy"><b><?php echo $row['title'] ?></b></h3>
+                                <h3 class="text-default"><b><?php echo $row['title'] ?></b></h3>
                                 <small class="text-muted">Par <b
-                                        class="text-info"><?= isset($student_arr[$row['student_id']]) ? $student_arr[$row['student_id']] : "N/A" ?></b></small>
+                                        class="text-success"><?= isset($student_arr[$row['student_id']]) ? $student_arr[$row['student_id']] : "N/A" ?></b></small>
                                 <p class="truncate-5"><?= $row['abstract'] ?></p>
                             </div>
                         </div>

@@ -53,18 +53,18 @@
         alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
         </script>
         <?php endif;?>
-        <!-- Content Wrapper. Contains page content -->
+        <!-- Enveloppe de contenu. Contient le contenu de la page -->
         <div class="content-wrapper pt-5">
             <?php if($page == "home" || $page == "about_us"): ?>
             <div id="header" class="shadow mb-4">
                 <div class="d-flex justify-content-center h-100 w-100 align-items-center flex-column px-3">
                     <!--<h1 class="w-100 text-center site-title"><?php echo $_settings->info('name') ?></h1>-->
-                    <a href="./?page=projects" class="btn btn-lg btn-light rounded-pill w-25"
-                        id="enrollment"><b>Tous les Thèmes</b></a>
+                    <a href="./?page=projects" class="btn btn-lg btn-light rounded-pill w-25" id="enrollment"><b>Tous
+                            les Thèmes</b></a>
                 </div>
             </div>
             <?php endif; ?>
-            <!-- Main content -->
+            <!-- Contenu principal -->
             <section class="content ">
                 <div class="container">
                     <?php 
