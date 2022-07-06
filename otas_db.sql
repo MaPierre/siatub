@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 16 mars 2022 à 12:59
+-- Généré le : mar. 14 juin 2022 à 18:45
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.7
 
@@ -54,7 +54,9 @@ INSERT INTO `archive_list` (`id`, `archive_code`, `curriculum_id`, `year`, `titl
 (8, '2021120003', 11, 2021, 'Controle des courses de 100m', '&lt;p&gt;c\'est un syst&egrave;me qui va aider &agrave; automatiser les arriv&eacute;es en course de 100m&lt;/p&gt;', '&lt;p&gt;1.BIRUKUNDI Annah&lt;/p&gt;&lt;p&gt;2.IRANZI Alain&lt;/p&gt;', 'uploads/banners/archive-8.png?v=1640890212', 'uploads/pdf/archive-8.pdf?v=1640890212', 1, 6, '2021-12-30 20:50:11', '2021-12-30 20:53:43'),
 (9, '2021120005', 10, 2021, 'Data Mining', '&lt;p&gt;c\'est une th&egrave;se qui parle la fouille des donn&eacute;es&lt;/p&gt;', '&lt;p&gt;1.Longin IRAMBONA&lt;/p&gt;', 'uploads/banners/archive-9.png?v=1640963985', 'uploads/pdf/archive-9.pdf?v=1640963985', 1, 4, '2021-12-31 17:19:44', '2021-12-31 17:21:32'),
 (10, '2022010001', 10, 2022, 'Un système automatisé de gestion de chaleur d\'une maison', '&lt;p&gt;c\'est un syst&egrave;me de domotique construit grace &agrave; l\'arduino qui va permettre de g&eacute;rer la chaleur int&eacute;rieur d\'une maison d\'une fa&ccedil;con automatique&lt;/p&gt;', '&lt;p&gt;1.Dr Hilaire NKUZIMANA&lt;/p&gt;&lt;p&gt;2.Dr Th&eacute;rence IGIRANEZA&lt;/p&gt;', 'uploads/banners/archive-10.png?v=1641062695', 'uploads/pdf/archive-10.pdf?v=1641062695', 1, 4, '2022-01-01 20:44:54', '2022-01-01 20:47:06'),
-(11, '2022020001', 11, 2022, 'Machine learning', '&lt;p&gt;Cette th&egrave;se parle de l\'utilisation de l\'intelligence artificielle en impl&eacute;mentant Machine learning pour la fouille des donn&eacute;es ,pr&eacute;diction du futur&lt;/p&gt;', '&lt;p&gt;1.Ndayiziga Annonciatte&lt;/p&gt;', 'uploads/banners/archive-11.png?v=1645308014', 'uploads/pdf/archive-11.pdf?v=1645308014', 1, 6, '2022-02-20 00:00:13', '2022-02-20 00:01:48');
+(11, '2022020001', 11, 2022, 'Machine learning', '&lt;p&gt;Cette th&egrave;se parle de l\'utilisation de l\'intelligence artificielle en impl&eacute;mentant Machine learning pour la fouille des donn&eacute;es ,pr&eacute;diction du futur&lt;/p&gt;', '&lt;p&gt;1.Ndayiziga Annonciatte&lt;/p&gt;', 'uploads/banners/archive-11.png?v=1645308014', 'uploads/pdf/archive-11.pdf?v=1645308014', 1, 6, '2022-02-20 00:00:13', '2022-02-20 00:01:48'),
+(12, '2022060001', 11, 2022, 'informatique pour les enfants', '&lt;p&gt;Ce livre va etre utiliser &agrave; enseigner les enfants&amp;nbsp; &agrave; avoir la logique de la programmation au bas age&lt;/p&gt;', '&lt;p&gt;1.Directeur de M&eacute;moire :Dr Hilaire NKUNZIMANA&lt;/p&gt;&lt;p&gt;2.Secr&eacute;taire du Jury:Dr Mich&egrave;le MUKESHIMANA&lt;/p&gt;', 'uploads/banners/archive-12.png?v=1654772018', 'uploads/pdf/archive-12.pdf?v=1654772019', 1, 8, '2022-06-09 12:53:37', '2022-06-09 12:56:21'),
+(13, '2022060002', 11, 2022, 'Conception et Réalisation d\'un Système Intelligent d\'Archivage des thèmes de mémoire à l\'Université du Burundi', '&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-size:13.0pt;line-height:115%;font-family:\r\n&amp;quot;Times New Roman&amp;quot;,serif&quot;&gt;Ce projet s\'intitule &lt;b&gt;syst&egrave;me Intelligent d\'archivage des th&egrave;ses en ligne &agrave; l&rsquo;universit&eacute; du\r\nBurundi(SIATUB) en sigle&lt;/b&gt; et a &eacute;t&eacute; d&eacute;velopp&eacute; en utilisant PHP et MySQL\r\nDatabase. Il s\'agit d\'une application Web qui fournit une plate-forme en ligne\r\npour stocker la th&egrave;se ou les projets de synth&egrave;se des &eacute;tudiants. L\'objectif\r\nprincipal de cette application est de donner aux &eacute;tudiants d\'une certaine\r\nuniversit&eacute; ou coll&egrave;ge un acc&egrave;s en ligne pour stocker leurs projets de derni&egrave;re\r\nann&eacute;e et de permettre aux &eacute;tudiants de premi&egrave;re ann&eacute;e de trouver des r&eacute;f&eacute;rences\r\net des id&eacute;es pour leur futur ou prochain projet de derni&egrave;re ann&eacute;e. Le syst&egrave;me a\r\n&eacute;t&eacute; &eacute;crit en PHP/OOP (programmation orient&eacute;e objet) et poss&egrave;de de multiples\r\ncaract&eacute;ristiques et fonctionnalit&eacute;s li&eacute;es &agrave; ce type de syst&egrave;me. Cela a des\r\nfonctionnalit&eacute;s conviviales et une interface utilisateur agr&eacute;able utilisant le\r\ncadre Bootstrap et le mod&egrave;le AdminLTE.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;', '&lt;ol&gt;&lt;li&gt;Pr&eacute;sident du Jury:Pr. Dr. J&eacute;r&eacute;mie NDIKUMAGEGE&lt;/li&gt;&lt;li&gt;Membre du Jury:Dr. Mich&egrave;le MUKESHIMANA&lt;/li&gt;&lt;li&gt;Directeur de m&eacute;moire: Dr. Hilaire NKUNZIMANA&lt;/li&gt;&lt;/ol&gt;', 'uploads/banners/archive-13.png?v=1655223261', 'uploads/pdf/archive-13.pdf?v=1655223263', 1, 8, '2022-06-14 18:14:20', '2022-06-14 18:16:22');
 
 -- --------------------------------------------------------
 
@@ -80,9 +82,14 @@ INSERT INTO `tbl_filieres` (`id`, `department_id`, `name`, `description`, `statu
 (10, 7, 'GI', 'Génie Informatique', 1, '2021-12-17 22:40:53', NULL),
 (11, 8, 'EB', 'Entrainement Basketball', 1, '2021-12-17 22:41:30', NULL),
 (12, 9, 'HE', 'hydroélectrique et environnement', 1, '2021-12-21 22:55:22', NULL),
-(13, 10, 'IPA MATHS', 'Dans cette département on enseigne les mathétiques utilisés dans l\'enseignement primaire et secondqire', 1, '2022-01-31 21:17:23', '2022-01-31 21:17:40');
+(13, 10, 'IPA MATHS', 'Dans cette département on enseigne les mathétiques utilisés dans l\'enseignement primaire et secondaire', 1, '2022-01-31 21:17:23', '2022-03-16 14:08:26'),
+(14, 11, 'Finance et Comptabilité', '', 1, '2022-05-25 22:16:48', NULL),
+(15, 11, 'marketing et Stratégies', '', 1, '2022-05-25 22:17:19', NULL),
+(16, 12, 'Economie Publique et Planification', '', 1, '2022-05-25 22:18:48', NULL),
+(17, 12, 'Economie Monétaire et Bancaire', '', 1, '2022-05-25 22:19:15', NULL),
+(18, 12, 'Economie Internationale', '', 1, '2022-05-25 22:19:41', NULL);
 
-
+-- --------------------------------------------------------
 
 --
 -- Structure de la table `department_list`
@@ -94,7 +101,7 @@ CREATE TABLE `department_list` (
   `description` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,8 +111,11 @@ CREATE TABLE `department_list` (
 INSERT INTO `department_list` (`id`, `name`, `description`, `status`, `date_created`, `date_updated`) VALUES
 (7, 'TIC', 'Technologies de l\'information et de la  communication', 1, '2021-12-17 22:39:02', '2021-12-21 22:33:48'),
 (8, 'IEPS', 'Institut d\'Education Physique Supérieur', 1, '2021-12-17 22:39:55', NULL),
-(9, 'GCE', 'génie civil et environnement', 1, '2021-12-21 22:53:59', NULL),
-(10, 'IPA', 'Institut des pédagogies appliquées', 1, '2022-01-31 21:16:13', '2022-01-31 22:27:27');
+(9, 'GCE', 'génie civil et environnement', 1, '2021-12-21 22:53:59', '2022-05-26 14:23:49'),
+(10, 'IPA', 'Institut des pédagogies appliquées', 1, '2022-01-31 21:16:13', '2022-01-31 22:27:27'),
+(11, 'Département de Gestion ', 'C\'est un département de la Faculté des Sciences Economiques et de Gestion', 1, '2022-05-25 22:13:08', '2022-05-25 22:16:17'),
+(12, 'Economie Politique', 'Département de la Faculté des Sciences Economiques et de Gestion\r\n', 1, '2022-05-25 22:18:18', NULL),
+(13, 'Département d’Economie Rurale', 'Département de la Faculté des Sciences Economiques et de Gestion', 1, '2022-05-25 22:20:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -138,7 +148,7 @@ INSERT INTO `student_list` (`id`, `firstname`, `middlename`, `lastname`, `depart
 (5, 'PACIFIQUE', 'MOSOZI', 'NKENGURUTSE', 7, 10, 'nkengu@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, '', '2021-12-19 17:35:14', '2021-12-19 17:38:37'),
 (6, 'Annociatte', '', 'NDAYIZIGA', 8, 11, 'ndayiziga@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Female', 1, '', '2021-12-30 20:44:31', '2021-12-30 20:46:52'),
 (7, 'Pierre', '', 'NKURUNZIZA', 8, 11, 'pierre2@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, '', '2021-12-31 17:39:28', '2021-12-31 17:40:53'),
-(8, 'Jean ', '', 'IRAMBONA', 8, 11, 'jean@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, '', '2021-12-31 17:49:49', '2022-01-01 13:36:18');
+(8, 'Jean ', 'Muzungu', 'IRAMBONA', 8, 11, 'jean@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Male', 1, 'uploads/student-8.png?v=1652786424', '2021-12-31 17:49:49', '2022-05-30 12:48:36');
 
 -- --------------------------------------------------------
 
@@ -157,11 +167,11 @@ CREATE TABLE `system_info` (
 --
 
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
-(1, 'name', 'Système d&apos;Archivage des Thèses en ligne à l&apos;Université du Burundi'),
-(6, 'short_name', 'SATUB'),
-(11, 'logo', 'uploads/logo-1639920709.png'),
+(1, 'name', 'Système Intelligent  d&apos;Archivage des Thèmes de mémoire   à l&apos;Université du Burundi'),
+(6, 'short_name', 'SIATUB'),
+(11, 'logo', 'uploads/logo-1647512341.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
-(14, 'cover', 'uploads/cover-1639920879.png'),
+(14, 'cover', 'uploads/cover-1647512158.png'),
 (15, 'content', 'Array'),
 (16, 'email', 'irakozepierre2@gmail.com'),
 (17, 'contact', '79040907 - 68211201'),
@@ -198,7 +208,7 @@ INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `p
 (1, 'Adminstrator', NULL, 'Admin', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-1.png?v=1640962158', NULL, 1, 1, '2021-01-20 14:02:37', '2021-12-31 17:03:37'),
 (3, 'Beathe', NULL, 'BIGIRIMANA', 'beathe', '25f9e794323b453885f5181f1b624d0b', 'uploads/avatar-3.png?v=1639774383', NULL, 2, 1, '2021-12-17 22:53:03', '2021-12-17 22:53:03'),
 (4, 'Nicodème', NULL, 'NTUYAHAGA', 'ntuya', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 2, 1, '2021-12-21 09:02:34', NULL),
-(5, 'Aicha', NULL, 'AHISHAKIYE', 'aicha', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 1, 1, '2021-12-31 16:47:36', '2021-12-31 17:05:51');
+(5, 'Pierre', NULL, 'MANIRAKOZE', 'pierre', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 1, 1, '2021-12-31 16:47:36', '2022-05-16 23:08:30');
 
 --
 -- Index pour les tables déchargées
@@ -256,19 +266,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `archive_list`
 --
 ALTER TABLE `archive_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `tbl_filieres`
 --
 ALTER TABLE `tbl_filieres`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `department_list`
 --
 ALTER TABLE `department_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `student_list`

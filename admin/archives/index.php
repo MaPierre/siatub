@@ -12,6 +12,8 @@
         <h2 class="card-title">Thèmes archivées</h2>
     </div>
     <div class="card-body">
+        <a href="export.php" class=" btn btn-success">Exporter</a>
+        <br>
         <div class="container-fluid">
             <div class="container-fluid">
                 <table class="table table-hover table-striped">

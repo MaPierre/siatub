@@ -138,28 +138,16 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <span class="text-navy">Université</span>
-                                        <select name="" id="id_universite" onchange="faculte()" 
-                                            class="form-control form-control-border" required>
-                                            <option value="0">Sélectionner</option>
-                                            <?php
-
-                                            $univerisite=$conn->query("SELECT `id_universite`, `nom_universite`, `adresse_uni`, `code_postal_uni` FROM `universite` WHERE 1 ORDER BY nom_universite ASC");
-
-                                            foreach ($univerisite as $key) {
-                                               echo "<option value='".$key['id_universite']."'>".$key['nom_universite']."</option>";
-                                            }
-                                            ?>
-
-
+                                        <select name="id_universite" id="id_universite"
+                                            class="form-control form-control-border select2" required>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <span class="text-navy">Faculté</span>
-                                        <select name="" onchange="departement(this.value)" id="id_faculte"
-                                            class="form-control form-control-border" required>
-                                            <option value="0">Sélectionner</option>
+                                        <select name="id_faculte" id="id_faculte"
+                                            class="form-control form-control-border select2" required>
                                         </select>
                                     </div>
                                 </div>
@@ -169,11 +157,16 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <span class="text-navy">Département</span>
-                                        <select name="department_id" onchange="filiere()" id="department_id"
+                                        <select name="department_id" id="department_id"
                                             class="form-control form-control-border select2" required>
 
-                                            <option value="">Sélectionner</option>
-                                           
+                                            <option value="" disabled></option>
+                                            <?php
+                                            $department = $conn->query("SELECT * FROM `department_list` where status = 1 order by `name` asc");
+                                            while ($row = $department->fetch_assoc()) :
+                                            ?>
+                                            <option value="<?= $row['id'] ?>"><?= ucwords($row['name']) ?></option>
+                                            <?php endwhile; ?>
                                         </select>
                                     </div>
                                 </div>
@@ -181,11 +174,16 @@
                                     <div class="form-group">
                                         <span class="text-navy">Filière/Option</span>
                                         <select name="curriculum_id" id="curriculum_id"
-                                            class="form-control form-control-border" required>
+                                            class="form-control form-control-border select2" required>
 
-                                            <option value="">Sélectionner</option>
-
-                                            
+                                            <?php
+                                            $curriculum = $conn->query("SELECT * FROM `tbl_filieres` where status = 1 order by `name` asc");
+                                            $cur_arr = [];
+                                            while ($row = $curriculum->fetch_assoc()) {
+                                                $row['name'] = ucwords($row['name']);
+                                                $cur_arr[$row['department_id']][] = $row['curriculum_id'];
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -239,16 +237,27 @@
     <script src="<?php echo base_url ?>plugins/select2/js/select2.full.min.js"></script>
 
     <script>
-   
-
-    // CETTE LIGNE A DES ERREURS IL FAUT VOIR COMMENT LA CORRIGER POUR AFFICHER LE FORMULAIRE D'INSCRIPTION
+    var cur_arr = $.parseJSON(
+        '<?= json_encode($cur_arr) ?>'
+    ); // CETTE LIGNE A DES ERREURS IL FAUT VOIR COMMENT LA CORRIGER POUR AFFICHER LE FORMULAIRE D'INSCRIPTION
     $(document).ready(function() {
         end_loader();
         $('.select2').select2({
             width: "100%"
         })
-
-  
+        $('#department_id').change(function() {
+            var did = $(this).val()
+            $('#curriculum_id').html("")
+            if (!cur_arr[did]) {
+                Object.keys(cur_arr[did]).map(k => {
+                    var opt = $("<option>")
+                    opt.attr('value', cur_arr[did][k].id)
+                    opt.text(cur_arr[did][k].name)
+                    $('#curriculum_id').append(opt)
+                })
+            }
+            $('#curriculum_id').trigger("change")
+        })
 
         // Registration Form Submit
         $('#registration-form').submit(function(e) {
@@ -307,60 +316,6 @@
             })
         })
     })
-
-
-
-
-    // pour selectionner les facultes dependant des universites
-
-    function faculte()
-    {
-        var id_universite=$('#id_universite').val();
-
-        $.post('get_faculte.php',
-        {
-            id_universite:id_universite
-        },function(data)
-        {
-            $('#id_faculte').html(data);
-        })
-
-    }
-
-
-     function departement()
-    {
-        var id_faculte=$('#id_faculte').val();
-
-        $.post('get_departement.php',
-        {
-            id_faculte:id_faculte
-        },function(data)
-        {
-            $('#department_id').html(data);
-        })
-
-    }
-
-
-     function filiere()
-    {
-        var department_id=$('#department_id').val();
-
-        $.post('get_filiere.php',
-        {
-            department_id:department_id
-        },function(data)
-        {
-            $('#curriculum_id').html(data);
-        })
-
-    }
-
-
-    
-
-
     </script>
 </body>
 
