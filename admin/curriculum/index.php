@@ -9,10 +9,10 @@
 </style>
 <div class="card card-outline card-primary">
     <div class="card-header">
-        <h3 class="card-title">Domaines d'études</h3>
+        <h2 class="card-title">Liste des Filières</h2>
         <div class="card-tools">
-            <a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-sm btn-primary"><span
-                    class="fas fa-plus"></span> Ajouter un nouveau domaine d'études</a>
+            <a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-sm btn-success"><i
+                    class="fa fa-plus-circle" style="font-size:24px;color:red"></i> Ajouter Filière/Option</a>
         </div>
     </div>
     <div class="card-body">
@@ -31,8 +31,8 @@
                         <tr>
                             <th>#</th>
                             <th>Date de Création</th>
-                            <th>Domaine d'études</th>
-                            <th>Programme d'études</th>
+                            <th>Département</th>
+                            <th>Filière</th>
                             <th>Statut</th>
                             <th>Action</th>
                         </tr>

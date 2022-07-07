@@ -66,7 +66,7 @@
                                 <a href="<?php echo base_url ?>admin/?page=curriculum" class="nav-link nav-curriculum">
                                     <i class="nav-icon fas fa-scroll"></i>
                                     <p>
-                                        Domaines d'études
+                                        Filières/Options
                                     </p>
                                 </a>
                             </li>

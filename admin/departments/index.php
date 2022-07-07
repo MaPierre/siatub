@@ -11,8 +11,8 @@
     <div class="card-header">
         <h3 class="card-title">Liste des Départements</h3>
         <div class="card-tools">
-            <a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-sm btn-primary"><span
-                    class="fas fa-plus"></span> Ajouter un Département</a>
+            <a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-sm btn-success">
+                <span class="fa fa-plus-square" style="color:red"></span>Département</a>
         </div>
     </div>
     <div class="card-body">

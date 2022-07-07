@@ -32,7 +32,7 @@
                             <th>Date de publication</th>
                             <th>Code d'archivage</th>
                             <th>Titre du projet</th>
-                            <th>Programme d'études</th>
+                            <th>Filière</th>
                             <th>Statut</th>
                             <th>Action</th>
                         </tr>
