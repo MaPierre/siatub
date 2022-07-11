@@ -71,6 +71,12 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                         </div>
                     </fieldset>
                     <fieldset>
+                        <legend class="text-navy">Cote:</legend>
+                        <div class="pl-4">
+                            <large><?= isset($cote) ? html_entity_decode($cote) : "" ?></large>
+                        </div>
+                    </fieldset>
+                    <fieldset>
                         <legend class="text-navy">Résumé:</legend>
                         <div class="pl-4">
                             <large><?= isset($abstract) ? html_entity_decode($abstract) : "" ?></large>

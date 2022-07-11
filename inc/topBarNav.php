@@ -78,7 +78,7 @@
             </button>
             <button type="button" class="btn btn-warning">
                 <a href="./admin" class="mx-2 ">
-                    Administrateur|Staff
+                    Administrateur|Personnel
                 </a>
             </button>
 

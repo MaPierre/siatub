@@ -12,7 +12,7 @@
         <h2 class="card-title">Liste des étudiants</h2>
     </div>
     <div class="card-body">
-       <a href="etudiants_excel.php" class="btn btn-danger">Exporter la liste</a>
+        <a href="etudiants_excel.php" class="btn btn-danger">Exporter la liste</a>
         <br>
         <div class="container-fluid">
             <div class="container-fluid">
@@ -31,6 +31,7 @@
                             <th>Numéro</th>
                             <th>Photo</th>
                             <th>Nom</th>
+                            <th>Matricule</th>
                             <th>Email</th>
                             <th>Statut</th>
                             <th>Action</th>
@@ -47,6 +48,7 @@
                             <td class="text-center"><img src="<?php echo validate_image($row['avatar']) ?>"
                                     class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
                             <td><?php echo ucwords($row['name']) ?></td>
+                            <td><?php echo ($row['matricule']) ?></td>
                             <td>
                                 <p class="m-0 truncate-1"><?php echo $row['email'] ?></p>
                             </td>
@@ -97,7 +99,8 @@ $(document).ready(function() {
     })
     $('.table td,.table th').addClass('py-1 px-2 align-middle')
     $('.verify_user').click(function() {
-        _conf("Voulez-vous vérifier le compte<b>" + $(this).attr('data-name') + "<b/>?", "verify_user",
+        _conf("Voulez-vous vérifier le compte  &nbsp;<b>" + $(this).attr('data-name') + "<b/>?",
+            "verify_user",
             [$(this).attr('data-id')])
     })
     $('.view_details').click(function() {

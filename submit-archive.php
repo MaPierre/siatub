@@ -43,6 +43,16 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="cote" class="control-label text-navy">Cote</label>
+                                <textarea rows="3" name="cote" id="cote" placeholder="cote"
+                                    class="form-control form-control-border summernote"
+                                    required><?= isset($cote) ? html_entity_decode($cote) : "" ?></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="year" class="control-label text-navy">Année</label>
@@ -68,16 +78,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="cote" class="control-label text-navy">Cote</label>
-                                <textarea rows="3" name="cote" id="cote" placeholder="cote"
-                                    class="form-control form-control-border summernote"
-                                    required><?= isset($cote) ? html_entity_decode($cote) : "" ?></textarea>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">

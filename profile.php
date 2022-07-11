@@ -35,6 +35,8 @@ foreach($user->fetch_array() as $k =>$v){
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <dl>
+                                <dt class="text-navy">Matricule:</dt>
+                                <dd class="pl-4"><?= ($matricule) ?></dd>
                                 <dt class="text-navy">Nom d'étudiant:</dt>
                                 <dd class="pl-4"><?= ucwords($fullname) ?></dd>
                                 <dt class="text-navy">Genre:</dt>

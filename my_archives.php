@@ -22,6 +22,7 @@
                                 <th>Date de publication</th>
                                 <th>Code d'archivage</th>
                                 <th>Titre du projet</th>
+                                <th>Cote</th>
                                 <th>Filière</th>
                                 <th>Statut</th>
                                 <th>Action</th>
@@ -40,6 +41,7 @@
                                 <td class=""><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
                                 <td><?php echo ($row['archive_code']) ?></td>
                                 <td><?php echo ucwords($row['title']) ?></td>
+                                <td><?php echo ucwords($row['cote']) ?></td>
                                 <td><?php echo $cur_arr[$row['curriculum_id']] ?></td>
                                 <td class="text-center">
                                     <?php

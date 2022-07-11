@@ -28,8 +28,10 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             </div>
             <div class="col-6">
                 <dl>
+                    <dt class="text-navy">Matricule de l'étudiant:</dt>
+                    <dd class="pl-4"><?= ($matricule) ?></dd>
                     <dt class="text-navy">Nom d'étudiant:</dt>
-                    <dd class="pl-4"><?= ucwords($fullname) ?></dd>
+                    <dd class="pl-8"><?= ucwords($fullname) ?></dd>
                     <dt class="text-navy">Genre:</dt>
                     <dd class="pl-4"><?= ucwords($gender) ?></dd>
                     <dt class="text-navy">Adresse email:</dt>
