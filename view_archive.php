@@ -8,11 +8,15 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         }
     }
     $submitted = "N/A";
+    $firstname='N/A';
+    $email='N/A';
     if(isset($student_id)){
         $student = $conn->query("SELECT * FROM student_list where id = '{$student_id}'");
         if($student->num_rows > 0){
             $res = $student->fetch_array();
-            $submitted = $res['email'];
+            $firstname=$res['firstname'];
+            $submitted = $res['lastname'];
+            $email=$res['email'];
         }
     }
 }
@@ -48,7 +52,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             <div class="card-body rounded-0">
                 <div class="container-fluid">
                     <h2><b><?= isset($title) ? $title : "" ?></b></h2>
-                    <small class="text-muted">Mise en ligne par <b class="text-info"><?= $submitted ?></b> au
+                    <small class="text-muted">Mise en ligne par <b
+                            class="text-info"><?= $submitted.'    ' .$firstname.'  avec email :'.'  '.$email?></b>
+                        au
                         <?= date("F d, Y h:i A",strtotime($date_created)) ?></small>
                     <?php if(isset($student_id) && $_settings->userdata('login_type') == "2" && $student_id == $_settings->userdata('id')): ?>
                     <div class="form-group">

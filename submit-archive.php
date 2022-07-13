@@ -25,7 +25,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 <div class="content py-4">
     <div class="card card-outline card-primary shadow rounded-0">
         <div class="card-header rounded-0">
-            <h5 class="card-title"><?= isset($id) ? "Update Archive-{$archive_code} Détails" : "Soumettre le projet" ?>
+            <h5 class="card-title">
+                <?= isset($id) ? "Mettre à jour l'Archive-{$archive_code} Détails" : "Soumettre le projet" ?>
             </h5>
         </div>
         <div class="card-body rounded-0">

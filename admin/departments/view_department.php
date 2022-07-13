@@ -1,7 +1,7 @@
 <?php
 require_once('../../config.php');
 if(isset($_GET['id'])){
-    $qry = $conn->query("SELECT * FROM `package_list` where id = '{$_GET['id']}'");
+    $qry = $conn->query("SELECT * FROM `department_list` where id = '{$_GET['id']}'");
     if($qry->num_rows > 0){
         $res = $qry->fetch_array();
         foreach($res as $k => $v){
@@ -12,9 +12,9 @@ if(isset($_GET['id'])){
 }
 ?>
 <style>
-    #uni_modal .modal-footer{
-        display:none !important;
-    }
+#uni_modal .modal-footer {
+    display: none !important;
+}
 </style>
 <div class="container-fluid">
     <dl>
@@ -41,6 +41,7 @@ if(isset($_GET['id'])){
         </dd>
     </dl>
     <div class="col-12 text-right">
-        <button class="btn btn-flat btn-sm btn-dark" type="button" data-dismiss="modal"><i class="fa fa-times"></i> Fermer</button>
+        <button class="btn btn-flat btn-sm btn-dark" type="button" data-dismiss="modal"><i class="fa fa-times"></i>
+            Fermer</button>
     </div>
 </div>

@@ -12,6 +12,12 @@ alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
     object-position: center center;
     border-radius: 100%;
 }
+
+table,
+th,
+td {
+    border: 1px solid SteelBlue;
+}
 </style>
 <div class="card card-outline card-primary">
     <div class="card-header">
@@ -26,18 +32,18 @@ alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
         <div class="container-fluid">
             <div class="container-fluid">
                 <table class="table table-hover table-striped">
-                    <!-- <colgroup>
-					<col width="5%">
-					<col width="10%">
-					<col width="20%">
-					<col width="20%">
-					<col width="15%">
-					<col width="15%">
-					<col width="10%">
-				</colgroup> -->
+                    <colgroup>
+
+                        <col width="10%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="10%">
+                    </colgroup>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Numéro</th>
                             <th>Photo de profil</th>
                             <th>Nom</th>
                             <th>Nom d'utilisateur</th>

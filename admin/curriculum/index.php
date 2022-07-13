@@ -93,10 +93,10 @@
 <script>
 $(document).ready(function() {
     $('#create_new').click(function() {
-        uni_modal("Détails du programme", "curriculum/manage_curriculum.php")
+        uni_modal("Détails de la Filière", "curriculum/manage_curriculum.php")
     })
     $('.edit_data').click(function() {
-        uni_modal("Détails du programme", "curriculum/manage_curriculum.php?id=" + $(this).attr(
+        uni_modal("Détails de la Filière", "curriculum/manage_curriculum.php?id=" + $(this).attr(
             'data-id'))
     })
     $('.delete_data').click(function() {
@@ -105,7 +105,7 @@ $(document).ready(function() {
         ])
     })
     $('.view_data').click(function() {
-        uni_modal("Détails du programme", "curriculum/view_curriculum.php?id=" + $(this).attr(
+        uni_modal("Détails de la Filière", "curriculum/view_curriculum.php?id=" + $(this).attr(
             'data-id'))
     })
     $('.table td,.table th').addClass('py-1 px-2 align-middle')

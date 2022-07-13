@@ -312,7 +312,7 @@ nav.text-light .nav-link {
 
 .list-group:empty:before {
     color: #505050;
-    content: "Lal liste est vide";
+    content: "La liste est vide";
     text-align: center;
     width: calc(100%)
 }
@@ -342,6 +342,6 @@ div#search-field.show {
     left: -30em;
     height: auto;
     padding: 0.5em 0.5em;
-    border: 1px solid #d7d7d7;
+    border: 1px solid #b96b6b;
     display: block !important;
 }

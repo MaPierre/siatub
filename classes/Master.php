@@ -98,9 +98,9 @@ Class Master extends DBConnection {
 				$rid = !empty($id) ? $id : $this->conn->insert_id;
 				$resp['status'] = 'success';
 				if(empty($id))
-					$resp['msg'] = "Détails du programme d'études ajoutés avec succès.";
+					$resp['msg'] = "Détails de la Filière d'études ajoutés avec succès.";
 				else
-					$resp['msg'] = "Les détails du programme ont été mis à jour avec succès.";
+					$resp['msg'] = "Les Détails de la Filière ont été mis à jour avec succès.";
 			}else{
 				$resp['status'] = 'failed';
 				$resp['msg'] = "An error occured.";

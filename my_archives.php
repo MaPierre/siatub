@@ -10,18 +10,19 @@
                         <colgroup>
                             <col width="5%">
                             <col width="15%">
+                            <col width="10%">
+                            <col width="20%">
+                            <col width="10%">
                             <col width="15%">
-                            <col width="20%">
-                            <col width="20%">
                             <col width="10%">
                             <col width="10%">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th>Numéro</th>
+                                <th>#</th>
                                 <th>Date de publication</th>
-                                <th>Code d'archivage</th>
-                                <th>Titre du projet</th>
+                                <th>Code</th>
+                                <th>Titre</th>
                                 <th>Cote</th>
                                 <th>Filière</th>
                                 <th>Statut</th>
@@ -130,6 +131,25 @@ function delete_archive($id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archives_département</title>
+    <style>
+    table,
+    th,
+    td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        border-radius: 10px;
+    }
+
+    th,
+    td {
+        background-color: #96D4D4;
+    }
+
+    body {
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+    }
+    </style>
 </head>
 
 <body>

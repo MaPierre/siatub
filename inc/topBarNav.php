@@ -53,13 +53,13 @@
                     </a></button>
             </span>
             <?php else: ?>
-            <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://10.10.6.254/"
-                    target="_blank" class="mx-2 text-black me-2">
+            <button type="button" class="btn btn-primary" data-mdb-ripple-color="dark"><a href="http://10.10.6.254/"
+                    target="_blank" class="mx-2 text-light me-2">
                     Catalogue Bibliothécaire
                 </a>
             </button>
-            <button type="button" class="btn btn-light" data-mdb-ripple-color="dark"><a href="http://www.ub.edu.bi/"
-                    target="_blank" class="mx-2 text-black me-2">
+            <button type="button" class="btn btn-secondary" data-mdb-ripple-color="dark"><a href="http://www.ub.edu.bi/"
+                    target="_blank" class="mx-2 text-light me-2">
                     Université du Burundi
                 </a>
             </button>
@@ -77,7 +77,7 @@
                 </a>
             </button>
             <button type="button" class="btn btn-warning">
-                <a href="./admin" class="mx-2 ">
+                <a href="./admin" class="mx-2 text-light me-2 ">
                     Administrateur|Personnel
                 </a>
             </button>
