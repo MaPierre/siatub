@@ -124,14 +124,23 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 
 	}
-	function save_archive(){
+	
+
+		/*$pref= date("Ym");
+		$code = sprintf("%'.04d",1);
+		while(true){
+		$check = $this->conn->query("SELECT * FROM `archive_list` where archive_code = '{$pref}{$code}'")->num_rows;
+		if($check > 0){
+		$code = sprintf("%'.04d",abs($code)+1);*/
+		//FONCTION POUR ENREGISTRER UN ARCHIVE
+		function save_archive(){
 		if(empty($_POST['id'])){
 			$pref= date("Ym");
-			$code = sprintf("%'.04d",1);
+			$code = uniqid('UB');
 			while(true){
 				$check = $this->conn->query("SELECT * FROM `archive_list` where archive_code = '{$pref}{$code}'")->num_rows;
 				if($check > 0){
-					$code = sprintf("%'.04d",abs($code)+1);
+					$code = sprintf($pref,$code );
 				}else{
 					break;
 				}
