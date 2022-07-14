@@ -63,7 +63,7 @@
                             </td>
                             <td align="center">
                                 <button type="button"
-                                    class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon"
+                                    class="btn btn-flat btn-warning btn-sm dropdown-toggle dropdown-icon"
                                     data-toggle="dropdown">
                                     Action
                                     <span class="sr-only">Basculer vers le menu déroulant</span>

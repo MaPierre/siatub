@@ -138,7 +138,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <span class="text-navy">Université</span>
-                                        <select name="" id="id_universite" onchange="faculte()" 
+                                        <select name="" id="id_universite" onchange="faculte()"
                                             class="form-control form-control-border" required>
                                             <option value="0">Sélectionner</option>
                                             <?php
@@ -173,7 +173,7 @@
                                             class="form-control form-control-border select2" required>
 
                                             <option value="">Sélectionner</option>
-                                           
+
                                         </select>
                                     </div>
                                 </div>
@@ -185,7 +185,7 @@
 
                                             <option value="">Sélectionner</option>
 
-                                            
+
                                         </select>
                                     </div>
                                 </div>
@@ -239,8 +239,6 @@
     <script src="<?php echo base_url ?>plugins/select2/js/select2.full.min.js"></script>
 
     <script>
-   
-
     // CETTE LIGNE A DES ERREURS IL FAUT VOIR COMMENT LA CORRIGER POUR AFFICHER LE FORMULAIRE D'INSCRIPTION
     $(document).ready(function() {
         end_loader();
@@ -248,7 +246,7 @@
             width: "100%"
         })
 
-  
+
 
         // Registration Form Submit
         $('#registration-form').submit(function(e) {
@@ -261,7 +259,7 @@
             el.hide()
             if ($("#password").val() != $("#cpassword").val()) {
                 el.addClass("alert-danger")
-                el.text("Le mot de passe ne correspond pas.")
+                el.text("Les mots de passe ne correspondent pas.")
                 $('#password, #cpassword').addClass("is-invalid")
                 $('#cpassword').after(el)
                 el.show('slow')
@@ -313,54 +311,40 @@
 
     // pour selectionner les facultes dependant des universites
 
-    function faculte()
-    {
-        var id_universite=$('#id_universite').val();
+    function faculte() {
+        var id_universite = $('#id_universite').val();
 
-        $.post('get_faculte.php',
-        {
-            id_universite:id_universite
-        },function(data)
-        {
+        $.post('get_faculte.php', {
+            id_universite: id_universite
+        }, function(data) {
             $('#id_faculte').html(data);
         })
 
     }
 
 
-     function departement()
-    {
-        var id_faculte=$('#id_faculte').val();
+    function departement() {
+        var id_faculte = $('#id_faculte').val();
 
-        $.post('get_departement.php',
-        {
-            id_faculte:id_faculte
-        },function(data)
-        {
+        $.post('get_departement.php', {
+            id_faculte: id_faculte
+        }, function(data) {
             $('#department_id').html(data);
         })
 
     }
 
 
-     function filiere()
-    {
-        var department_id=$('#department_id').val();
+    function filiere() {
+        var department_id = $('#department_id').val();
 
-        $.post('get_filiere.php',
-        {
-            department_id:department_id
-        },function(data)
-        {
+        $.post('get_filiere.php', {
+            department_id: department_id
+        }, function(data) {
             $('#curriculum_id').html(data);
         })
 
     }
-
-
-    
-
-
     </script>
 </body>
 

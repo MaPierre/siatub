@@ -16,16 +16,16 @@
         <br>
         <div class="container-fluid">
             <div class="container-fluid">
-                <table class="table table-hover table-striped">
-                    <!-- <colgroup>
-					<col width="5%">
-					<col width="10%">
-					<col width="20%">
-					<col width="20%">
-					<col width="15%">
-					<col width="15%">
-					<col width="10%">
-				</colgroup> -->
+                <table class="table table-hover table-bordered">
+                    <colgroup>
+                        <col width="5%">
+                        <col width="10%">
+                        <col width="30%">
+                        <col width="10%">
+                        <col width="20%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>Numéro</th>
@@ -40,14 +40,14 @@
                     <tbody>
                         <?php 
 						$i = 1;
-						$qry = $conn->query("SELECT *,concat(lastname,' ',firstname,' ', middlename) as name from `student_list`  order by concat(lastname,' ',firstname,' ', middlename) asc ");
+						$qry = $conn->query("SELECT *,concat(lastname,' ',firstname) as fullname from `student_list`  order by concat(lastname,' ',firstname) asc ");
 						while($row = $qry->fetch_assoc()):
 					?>
                         <tr>
                             <td class="text-center"><?php echo $i++; ?></td>
                             <td class="text-center"><img src="<?php echo validate_image($row['avatar']) ?>"
                                     class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
-                            <td><?php echo ucwords($row['name']) ?></td>
+                            <td><?php echo ucwords($row['fullname']) ?></td>
                             <td><?php echo ($row['matricule']) ?></td>
                             <td>
                                 <p class="m-0 truncate-1"><?php echo $row['email'] ?></p>
@@ -60,8 +60,7 @@
                                 <?php endif; ?>
                             </td>
                             <td align="center">
-                                <button type="button"
-                                    class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon"
+                                <button type="button" class="btn btn-flat btn-info btn-sm dropdown-toggle dropdown-icon"
                                     data-toggle="dropdown">
                                     Action
                                     <span class="sr-only">Basculer vers le menu déroulant</span>
