@@ -19,6 +19,11 @@ alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
             <form action="" id="manage-user">
                 <input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
                 <div class="form-group col-6">
+                    <label for="name">Email</label>
+                    <input type="text" name="email" id="email" class="form-control"
+                        value="<?php echo isset($meta['email_admin']) ? $meta['email_admin']: '' ?>" required>
+                </div>
+                <div class="form-group col-6">
                     <label for="name">Prénom</label>
                     <input type="text" name="firstname" id="firstname" class="form-control"
                         value="<?php echo isset($meta['firstname']) ? $meta['firstname']: '' ?>" required>
@@ -44,10 +49,10 @@ alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
                     <?php endif; ?>
                 </div>
                 <div class="form-group col-6">
-                    <label for="type">Type d'utilisateur</label>
+                    <label for="type">Type</label>
                     <select name="type" id="type" class="custom-select" required>
                         <option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>
-                            Administrateur</option>
+                            Admin</option>
                         <option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>
                             Staff</option>
                     </select>
@@ -117,7 +122,8 @@ $('#manage-user').submit(function(e) {
             if (resp == 1) {
                 location.href = './?page=user/list';
             } else {
-                $('#msg').html('<div class="alert alert-danger">Username already exist</div>')
+                $('#msg').html(
+                    '<div class="alert alert-danger">Nom d\'utilisateur existe déjà</div>')
                 $("html, body").animate({
                     scrollTop: 0
                 }, "fast");

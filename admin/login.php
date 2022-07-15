@@ -82,30 +82,34 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
-                                        <span>
-                                            <i class="fa fa-key"></i>
-                                        </span>
-
+                                        <span><i class="fa fa-key"></i></span>
                                     </div>
                                 </div>
-                                <input type="password" class="form-control" name="password" placeholder="Mot de passe">
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Mot de passe">
+                            </div>
 
+                            <div>
+                                <input type="checkbox" onclick="myFunction()"> Montre-moi
                             </div>
-                            <div class="row">
-                                <!-- /.col -->
-                                <div class="col-12 py-1">
-                                    <button type="submit" class="btn btn-success btn-block">Authentification</button>
-                                </div>
-                                <div class="col-12">
-                                    <a href="<?php echo base_url ?>" class="btn btn-info btn-block">Accueil</a>
-                                </div>
-                                <!-- /.col -->
-                            </div>
-                        </form>
+
+
                     </div>
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col-12 py-1">
+                            <button type="submit" class="btn btn-success btn-block">Authentification</button>
+                        </div>
+                        <div class="col-12">
+                            <a href="<?php echo base_url ?>" class="btn btn-info btn-block">Accueil</a>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- jQuery -->
@@ -119,6 +123,17 @@
     $(document).ready(function() {
         end_loader();
     })
+    </script>
+
+    <script>
+    function myFunction() {
+        var motdepasse = document.getElementById("password");
+        if (motdepasse.type === "password") {
+            motdepasse.type = "text";
+        } else {
+            motdepasse.type = "password";
+        }
+    }
     </script>
 </body>
 

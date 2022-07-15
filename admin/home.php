@@ -102,6 +102,11 @@
         <!-- /.info-box -->
     </div>
 
+
+</div>
+<div>
+    <p>Graphes</p>
+
 </div>
 <!DOCTYPE html>
 <html lang="fr">

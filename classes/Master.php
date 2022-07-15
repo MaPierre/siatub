@@ -39,7 +39,7 @@ Class Master extends DBConnection {
 		$check = $this->conn->query("SELECT * FROM `department_list` where `name`='{$name}' ".($id > 0 ? " and id != '{$id}'" : ""))->num_rows;
 		if($check > 0){
 			$resp['status'] = 'failed';
-			$resp['msg'] = "Nom du département déjà.";
+			$resp['msg'] = "Nom du département déjà existant.";
 		}else{
 			$save = $this->conn->query($sql);
 			if($save){

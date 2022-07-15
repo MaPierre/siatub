@@ -19,10 +19,12 @@
     top: 0 !important;
     z-index: 1037;
     padding: 1em 1.5em !important;
+    margin-bottom: 50px;
 }
 
 #top-Nav {
     top: 4em;
+    margin-right: 175px;
 }
 
 .text-sm .layout-navbar-fixed .wrapper .main-header~.content-wrapper,
@@ -70,26 +72,24 @@
 
                 </a>
             </button>
-            <button type="button" class="btn btn-info">
-                <a href="./login.php" class="mx-2 text-light me-2">
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     Connexion
+                </button>
+                <div class=" dropdown-menu">
+                    <a class=" dropdown-item" href="./login.php" class="mx-2 text-light me-2">Etudiant</a>
+                    <a class=" dropdown-item" href="./admin" class="mx-2 text-light me-2 ">Admin</a>
 
-                </a>
-            </button>
-            <button type="button" class="btn btn-warning">
-                <a href="./admin" class="mx-2 text-light me-2 ">
-                    Administrateur|Personnel
-                </a>
-            </button>
-
-
-
-
+                </div>
+            </div>
             <?php endif; ?>
         </div>
     </div>
 </nav>
-<nav class="main-header navbar navbar-expand navbar-red border-0 navbar-light text-sm" id='top-Nav'>
+<!-- liens de la barre de navigation inférieure avec les boutons ACCUEIL-->
+<nav class="main-header navbar navbar-expand navbar-red  border-0 navbar-light text-sm" id='top-Nav'>
 
     <div class="container">
         <a href="./" class="navbar-brand">
@@ -103,8 +103,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+
         <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-            <!-- liens de la barre de navigation inférieure-->
+
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="./" class="nav-link <?= isset($page) && $page =='home' ? "active" : "" ?>">Accueil</a>

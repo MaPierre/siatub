@@ -104,6 +104,9 @@
                                         <input type="password" name="password" id="password" placeholder="Mot de passe"
                                             class="form-control form-control-border" autocomplete="off" required>
                                     </div>
+                                    <div>
+                                        <input type="checkbox" onclick="myFunction()"> Montre-moi
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -180,6 +183,16 @@
             })
         })
     })
+    </script>
+    <script>
+    function myFunction() {
+        var motdepasse = document.getElementById("password");
+        if (motdepasse.type === "password") {
+            motdepasse.type = "text";
+        } else {
+            motdepasse.type = "password";
+        }
+    }
     </script>
 </body>
 

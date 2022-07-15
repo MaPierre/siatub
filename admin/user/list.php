@@ -34,20 +34,22 @@ td {
                 <table class="table table-hover table-striped">
                     <colgroup>
 
+                        <col width="5%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="25%">
+                        <col width="20%">
                         <col width="10%">
-                        <col width="20%">
-                        <col width="20%">
-                        <col width="20%">
-                        <col width="20%">
                         <col width="10%">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>Numéro</th>
                             <th>Photo de profil</th>
-                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Nom Complet</th>
                             <th>Nom d'utilisateur</th>
-                            <th>Type d'utilisateur</th>
+                            <th>Type</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -61,6 +63,7 @@ td {
                             <td class="text-center"><?php echo $i++; ?></td>
                             <td class="text-center"><img src="<?php echo validate_image($row['avatar']) ?>"
                                     class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
+                            <td><?php echo ($row['email_admin']) ?></td>
                             <td><?php echo ucwords($row['name']) ?></td>
                             <td>
                                 <p class="m-0 truncate-1"><?php echo $row['username'] ?></p>

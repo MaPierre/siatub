@@ -15,7 +15,7 @@
                 $search = "";
                 if(isset($_GET['q'])){
                     $keyword = $conn->real_escape_string($_GET['q']);
-                    $search = " and (title LIKE '%{$keyword}%' or cote LIKE '%{$keyword}%' or abstract  LIKE '%{$keyword}%' or members LIKE '%{$keyword}%' or curriculum_id in (SELECT id from tbl_filieres where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%') or curriculum_id in (SELECT id from tbl_filieres where department_id in (SELECT id FROM department_list where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%'))) ";
+                    $search = " and (title LIKE '%{$keyword}%' or archive_code LIKE '%{$keyword}%'or cote LIKE '%{$keyword}%' or abstract  LIKE '%{$keyword}%' or members LIKE '%{$keyword}%' or curriculum_id in (SELECT id from tbl_filieres where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%') or curriculum_id in (SELECT id from tbl_filieres where department_id in (SELECT id FROM department_list where name  LIKE '%{$keyword}%' or description  LIKE '%{$keyword}%'))) ";
                 }
                 $students = $conn->query("SELECT * FROM `student_list` where id in (SELECT student_id FROM archive_list where `status` = 1 {$search})");
                 $student_arr = array_column($students->fetch_all(MYSQLI_ASSOC),'lastname','id');
