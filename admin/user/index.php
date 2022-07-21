@@ -40,7 +40,8 @@ alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
                     <label for="password">Mot de passe</label>
                     <input type="password" name="password" id="password" class="form-control" value=""
                         autocomplete="off">
-                    <small><i>Laissez ce champ vide si vous ne souhaitez pas modifier le mot de passe.</i></small>
+                    <small class="text-success"><i>Laissez ce champ vide si vous ne souhaitez pas modifier le mot de
+                            passe.</i></small>
                 </div>
                 <div class="form-group">
                     <label for="" class="control-label">Photo de profil</label>

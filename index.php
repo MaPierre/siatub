@@ -47,7 +47,7 @@
 <body class="layout-top-nav layout-fixed layout-navbar-fixed" style="height: auto;">
     <div class="wrapper">
         <?php $page = isset($_GET['page']) ? $_GET['page'] : 'home';  ?>
-        <?php require_once('inc/topBarNav.php') ?>
+        <?php  require_once('inc/topBarNav.php')?>
         <?php if($_settings->chk_flashdata('success')): ?>
         <script>
         alert_toast("<?php echo $_settings->flashdata('success') ?>", 'success')
@@ -59,7 +59,8 @@
             <div id="header" class="shadow mb-4">
                 <div class="d-flex justify-content-center h-100 w-100 align-items-center flex-column px-3">
                     <!--<h1 class="w-100 text-center site-title"><?php echo $_settings->info('name') ?></h1>-->
-                    <a href="./?page=projects" class="btn btn-lg btn-light rounded-pill w-25" id="enrollment"><b>Tous
+                    <a href="./?page=projects" class="btn btn-lg btn-light rounded-pill w-25" id="enrollment"
+                        style="word-wrap: break-word;"><b>Tous
                             les Thèmes</b></a>
                 </div>
             </div>
