@@ -55,6 +55,11 @@
                     </a></button>
             </span>
             <?php else: ?>
+            <button type="button" class="btn btn-warning" data-mdb-ripple-color="dark"><a href="membersRegister.php"
+                    target="" class="mx-2 text-light me-2">
+                    Inscription pour les abonnés
+                </a>
+            </button>
             <button type="button" class="btn btn-primary" data-mdb-ripple-color="dark"><a href="http://10.10.6.254/"
                     target="_blank" class="mx-2 text-light me-2">
                     Catalogue Bibliothécaire

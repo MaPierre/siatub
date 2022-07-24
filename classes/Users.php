@@ -151,6 +151,7 @@ Class Users extends DBConnection {
 		}
 
 		if(empty($id)){
+			
 			$qry = $this->conn->query("INSERT INTO student_list set {$data}");
 			if($qry){
 				$id = $this->conn->insert_id;

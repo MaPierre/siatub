@@ -159,7 +159,7 @@ Class Master extends DBConnection {
 			$type = mime_content_type($_FILES['pdf']['tmp_name']);
 			if($type != "application/pdf"){
 				$resp['status'] = "failed";
-				$resp['msg'] = "Invalid Document File Type.";
+				$resp['msg'] = "Type de fichier de document non valide.";
 				return json_encode($resp);
 			} 
 		}
